@@ -1,5 +1,4 @@
-# 
-    Proyecto Integrador de Generation Mexico Salud y Vida
+# Proyecto Integrador de Generation Mexico Salud y Vida
 
 ## **Descripción del proyecto:**
 
@@ -60,7 +59,6 @@ Salud y Vida es un e-commerce de venta de productos oftálmicos que ofrece a los
 * **Integración de pasarela de pagos:** Para compras online seguras.
 * **Sistema de gestión de contenido (CMS):** Para facilitar la administración del sitio web.
 * **Implementación de medidas de seguridad:** Protección de datos personales y financieros.
-
 
 ## Conclusión
 
