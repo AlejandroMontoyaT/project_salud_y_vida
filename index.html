@@ -62,7 +62,28 @@
 </header>
 
 <main>
-
+  <form>
+    <fieldset disabled>
+      <legend>¿Cómo podemos ayudarte?</legend>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Nombre Completo:</label>
+        <input type="text" id="nameUser" class="form-control" placeholder="Juan Pérez Sánchez" required>
+      </div>
+      <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Correo electrónico:</label>
+        <input type="text" id="email" class="form-control" placeholder="juanitoperez@gmail.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Teléfono:</label>
+        <input type="number" id="phoneNumber" class="form-control" placeholder="5513993546" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submitContact">Enviar</button>
+    </fieldset>
+  </form>
 </main>
 
 <footer>
