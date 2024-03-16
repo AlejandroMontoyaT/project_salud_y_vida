@@ -1,4 +1,41 @@
-#menu{
-  background-color: white;
-  color:#003A5D;
-}
+#banner{
+
+position: fixed;
+width: 920px;
+height: 60px;
+left: calc(50% - 920px/2 - 1px);
+top: -34px;
+
+background: #5CE1E6;
+border-radius: 30px;
+size: 1vw;
+
+ }
+
+ #banner-promo{
+
+  font-size: 1vw;
+  color: black;
+ 
+
+ }
+
+ #form{
+  margin: -700px 1000px;
+  width: 500px;
+  padding: 10px;
+  size: 3vw;
+ }
+
+ .imgcontact{
+  width: 600px;
+  height: auto;
+  margin-top: 80px;
+  margin-left: 180px;
+ }
+
+ #submitContact{
+  color: white;
+
+  border-radius: 30px;
+ }
