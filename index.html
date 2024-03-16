@@ -1,95 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./style.scss">
-    <title>Salud y Vida</title>
-  </head>
-  <body>
-    <header>
-      
-      <section id="banner">
-        <div class="row justify-content-center ">
-          <div class="col-6 bg-info rounded-4 text-center">Promocion del dia: Lentes Gratis</div>    
-        </div>
-      </section> 
-      
-      <!-- Inicio de navbar -->    
-      
-      <section id="menu" class="container-fluid">
-        <nav class="navbar navbar-expand-lg ">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles.scss">
+  <title>Salud y Vida</title>
+</head>
+
+<body>
+  <header>
+
+    <section id="banner" class="fluid">
+      <div class="row justify-content-center container-sm">
+        <div id="banner-promo" class="col-6 bg-info rounded-4 text-center container-sm">Promoción del día:</div>
+      </div>
+    </section>
+
+    <!-- Inicio de navbar -->
+
+    <section id="menu" class="container-fluid">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Fin de navbar -->
+  </header>
+
+  <main>
+
+    <img class="img-fluid imgcontact" src="./assets/img/close-up-corrective-spectacle-snellen-chart.jpg" alt="">
+    <div>
+      <form id="form" class="fluid">
+        <fieldset>
+          <legend>¿Cómo podemos ayudarte?</legend>
+          <div class="row-cols-md-8">
+            <label for="disabledTextInput" class="form-label">Nombre Completo:</label>
+            <input type="text" id="nameUser" class="form-control mb-1" placeholder="Juan Pérez Sánchez" required>
+          </div>
+          <div class="row-cols-md-8">
+            <label for="disabledSelect" class="form-label">Correo electrónico:</label>
+            <input type="email" id="email" class="form-control mb-1" placeholder="juanitoperez@gmail.com" required>
+          </div>
+          <div class="row-cols-md-8">
+            <label for="disabledSelect" class="form-label">Teléfono:</label>
+            <input type="tel" id="phoneNumber" class="form-control mb-1" placeholder="5513993546" required>
+          </div>
+          <div class="row-cols-md-8">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <br>
+          <button type="submit" class="btn" style="background-color: #003A5D;" id="submitContact">Enviar</button>
+        </fieldset>
+        <br>
+        <div class="row mt-5">
+          <p><img src="./assets/img/call_FILL0_wght300_GRAD0_opsz24.png" alt="telefono" class="m-lg-1"> (55) 2352 9687</p>
+          <p><img src="./assets/img/mail_FILL0_wght300_GRAD0_opsz24.png" alt="correo" class="m-lg-1"> hola@saludvida.com</p>
+          <p><img src="./assets/img/facebook.png" alt="facebook" class="m-lg-1"> Salud Y Vida</p>
+          <p><img src="./assets/img/instagram.png" alt="instagram" class="m-lg-1"> @salud.vida</p>
+        </div>
+      </form>
+
     </div>
-  </nav>
-</section>
+    
+  </main>
 
-<!-- Fin de navbar -->
-</header>
+  <footer>
 
-<main>
-  <form>
-    <fieldset disabled>
-      <legend>¿Cómo podemos ayudarte?</legend>
-      <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">Nombre Completo:</label>
-        <input type="text" id="nameUser" class="form-control" placeholder="Juan Pérez Sánchez" required>
-      </div>
-      <div class="mb-3">
-        <label for="disabledSelect" class="form-label">Correo electrónico:</label>
-        <input type="text" id="email" class="form-control" placeholder="juanitoperez@gmail.com" required>
-      </div>
-      <div class="mb-3">
-        <label for="disabledSelect" class="form-label">Teléfono:</label>
-        <input type="number" id="phoneNumber" class="form-control" placeholder="5513993546" required>
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
-        <textarea class="form-control" id="message" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" id="submitContact">Enviar</button>
-    </fieldset>
-  </form>
-</main>
+  </footer>
 
-<footer>
-  
-</footer>
+  <script type="module" src="/main.js"></script>
+</body>
 
-<script type="module" src="/main.js"></script>
-  </body>
 </html>
