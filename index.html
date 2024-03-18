@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="" />
@@ -9,66 +8,76 @@
   <link rel="stylesheet" href="./styles.scss">
   <title>Salud y Vida</title>
 </head>
-
 <body>
   <header>
-
     <section id="banner" class="fluid">
       <div class="row justify-content-center container-sm">
-        <div id="banner-promo" class="col-6 bg-info rounded-4 text-center container-sm">Promoción del día:</div>
+        <div id="banner-promo" class="col-6 bg-info rounded-4 text-center container-sm">
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="carousel-item">¡Todos los Sábados, 2x1!</div>
+              <div class="carousel-item">Realiza tu examen de la vista completamente gratis en nuestra tienda</div>
+              <div class="carousel-item">Envío gratis a todo México</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Inicio de navbar -->
-
-    <section id="menu" class="container-fluid">
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <div class="container">
+          <div class="navigation-container">    
+            <div class="navbar-brand">      
+              <a href="#"><img src="./assets/img/Logo azul prusiano.png" alt="Logo"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/Logo_fb_azulagua.png" alt="Facebook"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/Logo_ig_azulagua.png" alt="Instagram"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Salud y Vida</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Optica</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Lentes de contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Visítanos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/zoom_out_icon_152713.png" alt="Buscar"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/users_icon_152726.png" alt="Login"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/heart_icon_152827.png" alt="Whitelist"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="./assets/img/truck_icon_152733.png" alt="Carrito"></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
-    </section>
+    </header>
+    
+  <!-- Fin de la barra de navegación -->
 
-    <!-- Fin de navbar -->
-  </header>
-
+  <!-- Contenido principal -->
   <main>
+    <!-- Tu contenido principal va aquí -->
+  </main>
 
     <img class="img-fluid imgcontact" src="./assets/img/close-up-corrective-spectacle-snellen-chart.jpg" alt="">
     <div>
@@ -112,6 +121,7 @@
   </footer>
 
   <script type="module" src="/main.js"></script>
+  <script src="./JS-Mecanicas-Pag/JS-General.js"></script>
 </body>
 
 </html>
