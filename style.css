@@ -1,59 +1,3 @@
-/* Estilos para el banner */
-#banner {
-  width: 100%; /* Establece el ancho del banner al 100% del contenedor padre */
-  height: 53px; /* Establece la altura del banner en 53 píxeles */
-  background: #5CE1E6; /* Establece el color de fondo del banner */
-  border-radius: 40px; /* Aplica bordes redondeados al banner */
-  position: relative; /* Elimina la posición fija para que no sea pegajoso */
-  top: -10px; /* Ajusta la posición vertical para subir el banner */
-}
-/* Estilos para el texto del banner */
-#banner-promo {
-  display: flex; /* Establece el contenedor del texto como un contenedor flexible */
-  align-items: center; /* Centra verticalmente el contenido dentro del contenedor */
-  justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */
-  height: 100%; /* Establece la altura del contenedor igual al 100% de su contenedor principal */
-  font-size: 25px; /* Establece el tamaño de la fuente del texto en 25 píxeles */
-  color: black; /* Establece el color del texto en negro */
-  overflow-x: auto; /* Permite el desplazamiento horizontal si el texto es demasiado ancho para el contenedor */
-  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-  line-height: 53px; /* Establece la altura de línea igual a la altura del contenedor para centrar verticalmente el texto */
-}
-/* Media queries para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-  #banner {
-    height: 40px; /* Reducir la altura del banner en dispositivos móviles */
-    top: -5px; /* Ajustar la posición vertical en dispositivos móviles */
-  }
-
-  #banner-promo {
-    font-size: 20px; /* Reducir el tamaño de la fuente en dispositivos móviles */
-    line-height: 40px; /* Ajustar la altura de línea en dispositivos móviles */
-  }
-}
-/* Estilos para el contenedor del carrusel */
-.carousel-container {
-  width: 50%; /* Ajustar según sea necesario */
-  overflow: hidden; /* Oculta el contenido que excede el ancho del contenedor */
-}
-/* Estilos para los elementos del carrusel */
-.carousel-item {
-  flex: 0 0 auto; /* Hace que los elementos del carrusel no cambien de tamaño */
-  padding: 0 25px; /* Añade un espacio interno a los elementos del carrusel */
-  white-space: pre-wrap; /* Permite que el texto se ajuste automáticamente en múltiples líneas y conserve los espacios en blanco */
-  overflow: hidden; /* Oculta el contenido que excede el ancho del contenedor */
-}
-/* Estilos para el carrusel */
-.carousel {
-  display: flex; /* Establece el contenedor del carrusel como un contenedor flexible */
-  /* Oculta el contenido que excede el ancho del contenedor */
-  animation: marquee 15s linear infinite; /* Ajusta la animación del carrusel */
-}
-/* Animación de desplazamiento del carrusel */
-@keyframes marquee {
-  0% { transform: translateX(100%); } /* Inicia el desplazamiento desde la derecha */
-  100% { transform: translateX(-100%); } /* Desplazamiento completo hacia la izquierda */
-}
 /* Estilos para el formulario */
 #form {
   margin: -700px 1000px; /* Margen para posicionar el formulario */
@@ -61,6 +5,7 @@
   padding: 10px; /* Espaciado interno del formulario */
   size: 3vw; /* Tamaño de la fuente en relación con el ancho de la ventana */
 }
+
 /* Estilos para la imagen de contacto */
 .imgcontact {
   width: 600px; /* Ancho de la imagen */
@@ -73,6 +18,12 @@
 #submitContact {
   color: white; /* Color del texto */
   border-radius: 30px; /* Borde redondeado */
+  background-color: #0f97ec; /* Color de fondo del botón */
+}
+
+/* Estilos para el  banner (barra de navegación) */
+.navbar {
+  z-index: 2; /* Asegura que el segundo banner esté por encima del primer banner */
 }
 
 /* Estilos para el contenedor principal del encabezado */
@@ -112,7 +63,7 @@
   max-width: 20px; /* Ancho máximo de las imágenes de redes sociales */
   border: none; /* Quitar el borde */
   outline: none; /* Quitar el contorno */
-  cursor: pointe
+  cursor: pointer;
 }
 
 /* Estilos para las acciones */
