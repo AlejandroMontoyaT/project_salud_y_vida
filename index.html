@@ -14,7 +14,7 @@
 <body>
     <header>
       <section id="banner" class="fluid">
-        <div class="row">
+        <div class="row-cols-md-auto ">
           <div id="banner-promo" class="col-6 col-md-5 bg-info rounded-4 d-flex align-items-center mx-auto">
             <div id="carouselExampleIndicators" class="carousel slide w-75" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -38,7 +38,7 @@
         </div>
       </section>
       
-      <nav class="navbar navbar-expand-lg navbar-dark bg-white navbar-custom justify-content-center fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-white navbar-custom justify-content-center fixed-top mb-sm-4">
         <div class="navbar-nav social-media">    
           <div class="navbar-item">      
             <a class="nav-link" href="#"><img src="./assets/img/Logo azul prusiano.png" alt="Facebook" style="max-width: 150px;"></a>
@@ -89,24 +89,27 @@
 
 <main>
   <!-- Tu contenido principal va aquí -->
-  <img class="img-fluid imgcontact" src="./assets/img/close-up-corrective-spectacle-snellen-chart.jpg" alt="">
-  <div>
-      <form action="https://formsubmit.co/ingabrahamjv@gmail.com" method="POST" id="form" class="fluid">
-          <fieldset>
+    <div class="row justify-content-md-center justify-content-sm-center mt-5">
+        <div class="col-md-auto col-sm-auto justify-content-md-center justify-content-sm-center d-none d-sm-block">
+  <img class="img-fluid imgcontact m-2 rounded p-1 justify-content-sm-center" src="./assets/img/close-up-corrective-spectacle-snellen-chart.jpg" alt="">
+        </div>
+  <div class="col-md-auto col-sm-auto p-2 m-2 mt-sm-auto justify-content-sm-center">
+      <form action="https://formsubmit.co/ingabrahamjv@gmail.com" method="POST" id="form" >
+          <fieldset class="col-md-auto col-sm-auto">
               <legend>¿Cómo podemos ayudarte?</legend>
-              <div class="row-cols-md-8">
+              <div >
                   <label for="nameUser" class="form-label">Nombre Completo:</label>
                   <input type="text" id="nameUser" name="name" class="form-control mb-1" placeholder="Juan Pérez Sánchez" required>
               </div>
-              <div class="row-cols-md-8">
+              <div >
                   <label for="email" class="form-label">Correo electrónico:</label>
                   <input type="email" id="email" name="email" class="form-control mb-1" placeholder="juanitoperez@gmail.com" required>
               </div>
-              <div class="row-cols-md-8">
+              <div>
                   <label for="phoneNumber" class="form-label">Teléfono:</label>
                   <input type="tel" id="phoneNumber" name="phone" class="form-control mb-1" placeholder="5513993546" required>
               </div>
-              <div class="row-cols-md-8">
+              <div>
                   <label for="message" class="form-label">Mensaje:</label>
                   <textarea id="message" name="message" class="form-control" rows="3"></textarea>
               </div>
@@ -122,6 +125,7 @@
           </div>
       </form>
   </div>
+    </div>
 </main>
 
 

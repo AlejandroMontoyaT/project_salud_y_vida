@@ -1,17 +1,17 @@
 /* Estilos para el formulario */
 #form {
-  margin: -700px 1000px; /* Margen para posicionar el formulario */
-  width: 500px; /* Ancho del formulario */
-  padding: 10px; /* Espaciado interno del formulario */
+ /* margin: -700px 1000px; /* Margen para posicionar el formulario */
+  width: 400px; /* Ancho del formulario */
+  /*padding: 10px; /* Espaciado interno del formulario */
   size: 3vw; /* Tamaño de la fuente en relación con el ancho de la ventana */
 }
 
 /* Estilos para la imagen de contacto */
 .imgcontact {
-  width: 600px; /* Ancho de la imagen */
+  width: 400px; /* Ancho de la imagen */
   height: auto; /* Altura automática para mantener la proporción */
-  margin-top: 80px; /* Margen superior para posicionar la imagen */
-  margin-left: 180px; /* Margen izquierdo para posicionar la imagen */
+  /*margin-top: 80px; /* Margen superior para posicionar la imagen */
+  /*margin-left: 180px; /* Margen izquierdo para posicionar la imagen */
 }
 
 /* Estilos para el botón de enviar del formulario */
@@ -28,14 +28,14 @@
 
 /* Estilos para el contenedor principal del encabezado */
 .container {
-  width: 80%; /* Ancho completo */
-  max-width: 1600px; /* Ancho máximo para el contenido del encabezado */
+  /*width: 80%; /* Ancho completo */
+  /*max-width: 1600px; /* Ancho máximo para el contenido del encabezado */
   margin: 0 auto; /* Centrar el contenedor */
 }
 
 /* Estilos para el contenedor de la barra de navegación */
 .navigation-container {
-  display: flex; /* Utilizar visualización flexible */
+  /*display: flex; /* Utilizar visualización flexible */
   justify-content: space-between; /* Alinear los elementos a los extremos */
   align-items: center; /* Alinear los elementos verticalmente al centro */
 }
@@ -68,6 +68,6 @@
 
 /* Estilos para las acciones */
 .navbar-nav:last-child {
-  display: flex; /* Utilizar visualización flexible */
+ /* display: flex; /* Utilizar visualización flexible */
   align-items: center; /* Alinear los elementos verticalmente al centro */
 }
