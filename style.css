@@ -1,3 +1,8 @@
+main{
+  min-height: calc(100vh - (100px + 50px));
+  min-height: calc(85vh);
+}
+
 /* Estilos para el formulario */
 #form {
  /* margin: -700px 1000px; /* Margen para posicionar el formulario */
@@ -69,7 +74,7 @@
 /* Estilos para las acciones */
 .navbar-nav:last-child {
  /* display: flex; /* Utilizar visualización flexible */
-  align-items: center; /* Alinear los elementos verticalmente al centro */
+ align-items: center; /* Alinear los elementos verticalmente al centro */
 }
 #menu{
   background-color: white;
@@ -89,12 +94,13 @@ body {
   background-color: #07778B; /* Color de fondo oscuro */
   color: white; /* Color del texto blanco */
   padding: 10px; /* Espaciado interno */
-  position: fixed; /* Fijar el footer en la parte inferior de la ventana */
+  position: relative; /* Fijar el footer en la parte inferior de la ventana */
   width: 100%; /* Ancho completo */
   bottom: 0; /* Fijar en la parte inferior */
   display: flex; /* Utilizar flexbox */
   justify-content: space-between; /* Distribuir los elementos de forma equitativa */
   align-items: center; /* Alinear verticalmente al centro */
+  flex-wrap: wrap;
 }
 
 /* Estilos para las columnas del footer */
