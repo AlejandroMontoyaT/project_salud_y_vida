@@ -3,6 +3,37 @@ main{
   min-height: calc(85vh);
 }
 
+/* Estilos para el contenedor del carrusel */
+.carousel-container {
+  width: 100%; /* Cambiado para ocupar todo el ancho */
+  overflow: hidden;
+}
+
+/* Estilos para los elementos del carrusel */
+.carousel-item {
+ 
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/* Estilos para el carrusel */
+.carousel {
+	color: Black;
+    white-space: normal;
+    overflow: hidden; 
+}
+.carousel p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+/* Animación de desplazamiento del carrusel */
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
 /* Estilos para el formulario */
 #form {
  /* margin: -700px 1000px; /* Margen para posicionar el formulario */
@@ -28,7 +59,6 @@ main{
 
 /* Estilos para el  banner (barra de navegación) */
 .navbar {
-  z-index: 2; /* Asegura que el segundo banner esté por encima del primer banner */
 }
 
 /* Estilos para el contenedor principal del encabezado */
@@ -59,10 +89,17 @@ main{
 
 /* Estilos para los enlaces de navegación */
 .navbar-nav .nav-link {
-  color: #5CE1E6; /* Color del texto */
+  color: #003A5D; /* Color del texto */
   margin-right: 20px; /* Espaciado a la derecha entre los enlaces */
 }
 
+a.nav-link:hover{
+  color: black; /* Color del texto */
+
+}
+button.navbar-toggler{
+  background-color: #003A5D;
+}
 /* Estilos para los enlaces de redes sociales */
 .navbar-nav .nav-link img {
   max-width: 20px; /* Ancho máximo de las imágenes de redes sociales */
@@ -156,4 +193,11 @@ ul {
 .company-name {
   color: white; /* Color del texto blanco */
   size: 1vw;
+}
+
+
+@media screen and (max-width:350px) {
+  /* 
+  codigo para la resposividad dependiendo del tamaño de la pantalla que elijamos via pixeles
+  */
 }
