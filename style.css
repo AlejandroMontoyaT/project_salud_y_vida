@@ -114,8 +114,8 @@ button.navbar-toggler{
   align-items: center; /* Alinear los elementos verticalmente al centro */
 }
 #menu{
-  background-color: white;
-  color:#003A5D;
+  background-color: rgb(252, 5, 5);
+  color:#1295e7;
 }
 
 /* Estilos para el cuerpo de la página */
