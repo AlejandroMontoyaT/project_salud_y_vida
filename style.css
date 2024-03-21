@@ -1,3 +1,8 @@
+main{
+  min-height: calc(100vh - (100px + 50px));
+  min-height: calc(85vh);
+}
+
 /* Estilos para el formulario */
 #form {
  /* margin: -700px 1000px; /* Margen para posicionar el formulario */
