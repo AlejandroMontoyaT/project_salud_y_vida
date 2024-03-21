@@ -67,8 +67,8 @@
 }
 
 /* Estilos para las acciones */
-.navbar-nav:last-child {
- /* display: flex; /* Utilizar visualización flexible */
+.navbar-nav{
+ display: flex; /* Utilizar visualización flexible */
   align-items: center; /* Alinear los elementos verticalmente al centro */
 }
 #menu{
@@ -88,23 +88,23 @@ body {
 .footer {
   background-color: #07778B; /* Color de fondo oscuro */
   color: white; /* Color del texto blanco */
-  padding: 10px; /* Espaciado interno */
-  position: fixed; /* Fijar el footer en la parte inferior de la ventana */
-  width: 100%; /* Ancho completo */
-  bottom: 0; /* Fijar en la parte inferior */
-  display: flex; /* Utilizar flexbox */
-  justify-content: space-between; /* Distribuir los elementos de forma equitativa */
-  align-items: center; /* Alinear verticalmente al centro */
+  /*padding: 10px; /* Espaciado interno */
+  /*position: relative; /* Fijar el footer en la parte inferior de la ventana */
+  /*width: 100%; /* Ancho completo */
+  /*bottom: 0; /* Fijar en la parte inferior */
+  /*display: flex; /* Utilizar flexbox */
+  /*justify-content: normal; /* Distribuir los elementos de forma equitativa */
+  /*align-items: center; /* Alinear verticalmente al centro */
 }
 
 /* Estilos para las columnas del footer */
 .footer-column {
-  flex: 1; /* Cada columna ocupa el mismo espacio */
+  /*flex: 1; /* Cada columna ocupa el mismo espacio */
   text-align: left; /* Alinear el texto al centro */
   color: white; /* Color del texto blanco */
-  display: flex; /* Utilizar flexbox */
-  flex-direction: column; /* Dirección de la columna */
-  justify-content: flex-start; /* Alinear elementos al inicio (parte superior) */
+  /* display: flex; /* Utilizar flexbox */ 
+  /*flex-direction: column; /* Dirección de la columna */
+  /*justify-content: normal; /* Alinear elementos al inicio (parte superior) */
 
 }
 
@@ -124,7 +124,7 @@ ul {
 
 /* Estilos para los elementos de la lista dentro de las columnas */
 .footer-column ul li {
-  margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+  /*margin-bottom: 5px; /* Espaciado entre elementos de la lista */
 }
 
 /* Estilos para los enlaces dentro de las listas */
@@ -135,20 +135,20 @@ ul {
 
 /* Estilos para los enlaces de imagen dentro de las listas */
 .footer-column ul li img {
-  margin-right: 5px; /* Espaciado entre imágenes */
+  /*margin-right: 5px; /* Espaciado entre imágenes */
 }
 
 /* Estilos para las columnaC */
 .footer-columnC {
-  flex: 1; /* Cada columna ocupa el mismo espacio */
-  text-align: center; /* Alinear el texto al centro */
-  display: flex; /* Utilizar flexbox */
-  flex-direction: column; /* Dirección de la columna */
-  justify-content: flex-end; /* Alinear elementos al final (parte inferior) */
+  /*flex: 1; /* Cada columna ocupa el mismo espacio */
+  /*text-align: center; /* Alinear el texto al centro */
+  /*display: flex; /* Utilizar flexbox */
+  /*flex-direction: column; /* Dirección de la columna */
+  /*justify-content: flex-end; /* Alinear elementos al final (parte inferior) */
 }
 
 /* Estilos para el nombre de la compañía */
 .company-name {
   color: white; /* Color del texto blanco */
-  margin-top: auto; /* Mover el texto hacia la parte inferior */
+  size: 1vw;
 }
