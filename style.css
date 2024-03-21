@@ -1,3 +1,39 @@
+main{
+  min-height: calc(100vh - (100px + 50px));
+  min-height: calc(85vh);
+}
+
+/* Estilos para el contenedor del carrusel */
+.carousel-container {
+  width: 100%; /* Cambiado para ocupar todo el ancho */
+  overflow: hidden;
+}
+
+/* Estilos para los elementos del carrusel */
+.carousel-item {
+ 
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/* Estilos para el carrusel */
+.carousel {
+	color: Black;
+    white-space: normal;
+    overflow: hidden; 
+}
+.carousel p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+/* Animación de desplazamiento del carrusel */
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
 /* Estilos para el formulario */
 #form {
  /* margin: -700px 1000px; /* Margen para posicionar el formulario */
@@ -23,7 +59,6 @@
 
 /* Estilos para el  banner (barra de navegación) */
 .navbar {
-  z-index: 2; /* Asegura que el segundo banner esté por encima del primer banner */
 }
 
 /* Estilos para el contenedor principal del encabezado */
@@ -54,10 +89,17 @@
 
 /* Estilos para los enlaces de navegación */
 .navbar-nav .nav-link {
-  color: #5CE1E6; /* Color del texto */
+  color: #003A5D; /* Color del texto */
   margin-right: 20px; /* Espaciado a la derecha entre los enlaces */
 }
 
+a.nav-link:hover{
+  color: black; /* Color del texto */
+
+}
+button.navbar-toggler{
+  background-color: #003A5D;
+}
 /* Estilos para los enlaces de redes sociales */
 .navbar-nav .nav-link img {
   max-width: 20px; /* Ancho máximo de las imágenes de redes sociales */
@@ -67,7 +109,95 @@
 }
 
 /* Estilos para las acciones */
-.navbar-nav:last-child {
- /* display: flex; /* Utilizar visualización flexible */
+.navbar-nav{
+ display: flex; /* Utilizar visualización flexible */
   align-items: center; /* Alinear los elementos verticalmente al centro */
+}
+#menu{
+  background-color: rgb(252, 5, 5);
+  color:#1295e7;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 10px; /* Tamaño de la letra en 16px */
+}
+
+/*Comienza estilos para el fooster*/
+.footer {
+  background-color: #07778B; /* Color de fondo oscuro */
+  color: white; /* Color del texto blanco */
+  /*padding: 10px; /* Espaciado interno */
+  /*position: relative; /* Fijar el footer en la parte inferior de la ventana */
+  /*width: 100%; /* Ancho completo */
+  /*bottom: 0; /* Fijar en la parte inferior */
+  /*display: flex; /* Utilizar flexbox */
+  /*justify-content: normal; /* Distribuir los elementos de forma equitativa */
+  /*align-items: center; /* Alinear verticalmente al centro */
+}
+
+/* Estilos para las columnas del footer */
+.footer-column {
+  /*flex: 1; /* Cada columna ocupa el mismo espacio */
+  text-align: left; /* Alinear el texto al centro */
+  color: white; /* Color del texto blanco */
+  /* display: flex; /* Utilizar flexbox */ 
+  /*flex-direction: column; /* Dirección de la columna */
+  /*justify-content: normal; /* Alinear elementos al inicio (parte superior) */
+
+}
+
+/* Estilos para el título de las columnas */
+.footer-heading {
+  color: white; /* Color del texto blanco */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/*Para evitar que se vean los puntos en la web*/
+ul {
+
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para los elementos de la lista dentro de las columnas */
+.footer-column ul li {
+  /*margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para los enlaces dentro de las listas */
+.footer-column ul li a {
+  color: white; /* Color del texto blanco */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+/* Estilos para los enlaces de imagen dentro de las listas */
+.footer-column ul li img {
+  /*margin-right: 5px; /* Espaciado entre imágenes */
+}
+
+/* Estilos para las columnaC */
+.footer-columnC {
+  /*flex: 1; /* Cada columna ocupa el mismo espacio */
+  /*text-align: center; /* Alinear el texto al centro */
+  /*display: flex; /* Utilizar flexbox */
+  /*flex-direction: column; /* Dirección de la columna */
+  /*justify-content: flex-end; /* Alinear elementos al final (parte inferior) */
+}
+
+/* Estilos para el nombre de la compañía */
+.company-name {
+  color: white; /* Color del texto blanco */
+  size: 1vw;
+}
+
+
+@media screen and (max-width:350px) {
+  /* 
+  codigo para la resposividad dependiendo del tamaño de la pantalla que elijamos via pixeles
+  */
 }
