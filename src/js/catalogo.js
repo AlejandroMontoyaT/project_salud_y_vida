@@ -89,6 +89,48 @@ const sampleCatalog = [{
         'modelo_p':  'EVR21902',
         'sku':' PST564C44 ',
         'genero':'M'
+},
+
+{
+    'id_producto':'8',
+    'nombre_producto':'Lente',
+    'img':'https://i.ibb.co/v4n9TSs/imagen-2024-04-02-160544835.png',
+    'descripcion_p':' Lente oftálmico para Hombre Molto DG-84578S Negro',
+    'precio_p': '999',
+    'en_stock':'3',
+    'marca':' MOLTO',
+    'descuento':'0',
+    'modelo_p':' DG-84578S',
+    'sku':' AW685C2 ',
+    'genero':'M'
+},
+{
+        "id_producto": "9",
+        "nombre_producto": "Lentes de Sol Deportivos Oakley Fast Jacket 2.0",
+        "img": 'https://i.ibb.co/v4n9TSs/imagen-2024-04-02-160544835.png',
+        "descripcion_p": "Gafas de sol deportivas con diseño aerodinámico y lentes Prizm que mejoran la percepción del color y la definición. Perfectas para practicar deportes al aire libre.",
+        "precio_p": "2,200",
+        "en_stock": "15",
+        "marca": "Oakley",
+        "descuento": "5",
+        "modelo_p": "Fast Jacket 2.0",
+        "sku": "OAK-FASTJACKET2.0",
+        "genero": "Hombre",
+
+},
+{
+        'id_producto':'10',
+        'nombre_producto':'Lente ',
+        'img':'https://i.ibb.co/v4n9TSs/imagen-2024-04-02-160544835.png',
+        'descripcion_p':'Lente Oftálmico para Hombre Xikú Trendy HA10593 (SW)',
+        'precio_p': '1700',
+        'en_stock':'3',
+        'marca':'Xicu',
+        'descuento':'0',
+        'modelo_p':'HA10593',
+        'sku':'567423',
+        'genero':'H'
+
 }];
         localStorage.setItem("items", JSON.stringify(sampleCatalog));
 
@@ -101,15 +143,15 @@ const agregarCatalogo = () => {
           
             items.forEach(item => {
                   card.innerHTML += `<div class="col">
-                  <div class="card h-100">
+                  <div class="card h-100 ">
                     <img src="${item.img}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${item.nombre_producto}</h5>
                       <p class="card-text">${item.descripcion_p}</p>
                     </div>
-                    <div class="row justify-content-center">
-                    <div class="col-5 justify-content-center align-content-center"><button>Comprar Ahora    </button></div>
-                    <div class="col-6"><a href="#"><img class=" img-fluid w-50" src="../../assets/img/carrito temporal.jpg" alt=""></a></div>
+                    <div class="row justify-content-center p-2">
+                    <div class="col-8 justify-content-center align-content-center"><button class="btn btn-primary">Comprar Ahora    </button></div>
+                    <div class="col-4"><a href="#"><img class=" img-fluid w-50" src="../../assets/img/carrito temporal.jpg" alt=""></a></div>
                   </div>
                   </div>
                 </div>
