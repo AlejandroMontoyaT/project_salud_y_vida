@@ -1,0 +1,224 @@
+/* Estilos para todo el cuerpo del HTML */
+body {
+  font-family: 'Arial', sans-serif; /* Cambio de fuente */
+  background-color: #1295e7; /* Color de fondo oscuro */
+  color: #0a0a0a; /* Color de texto predeterminado */
+}
+
+/* Estilos para los enlaces del menú desplegable */
+.navbar-nav .nav-link.dropdown-toggle {
+  color: #0278ff; /* Color del texto del enlace */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  width: 80%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
+  background-color: #1295e7; /* Color de fondo azulado */
+  padding: 20px; /* Espaciado interior */
+  text-align: center; /* Alineación centrada */
+}
+
+/* Estilos para el contenedor de contenido */
+.contenido {
+  background-color: #1295e7; /* Color de fondo azulado más claro */
+  padding: 40px; /* Espaciado interior */
+  margin-top: 40px; /* Margen superior */
+}
+
+/* Estilos para el segundo contenedor */
+.otro-contenedor {
+  background-color: #0f97ec; /* Color de fondo oscuro */
+  padding: 20px; /* Espaciado interior */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para las imágenes de perfil */
+.profile-img {
+  max-width: 100%; /* Ancho máximo */
+  height: auto; /* Altura automática */
+  border: 2px solid #0f97ec; /* Borde sólido azulado */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Incluir borde en el tamaño total */
+  max-height: 200px; /* Altura máxima */
+  position: relative; /* Posición relativa para el efecto de fuego */
+}
+
+/* Estilos para el texto de descripción */
+.participant p {
+  font-family: 'Arial', sans-serif; /* Fuente */
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #0e0d0d; /* Color de texto */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilos para el contenedor de cada participante */
+.participant {
+  background-color: #1295e7; /* Color de fondo azulado */
+  border: 1px solid #1295e7; /* Borde sólido azulado */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 20px; /* Espaciado interior */
+  margin-bottom: 20px; /* Margen inferior */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para los encabezados dentro del contenedor de cada participante */
+.participant h3 {
+  font-size: 20px; /* Tamaño de fuente */
+  color: #000000; /* Color del texto */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para el contenedor del reproductor de música */
+.audio-player {
+  background-color: #1295e7;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los controles del reproductor de música */
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los botones del reproductor de música */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
+  color: #0a0a0a; /* Color de los íconos */
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: #449297; /* Color de los íconos al pasar el mouse */
+}
+
+/* Estilos para la barra de progreso del reproductor de música */
+.progress-container {
+  background-color: #030303;
+  height: 5px;
+  flex-grow: 1;
+  margin: 0 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+#progress {
+  background-color: #333;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  border-radius: 5px;
+}
+
+/* Estilos para el contenedor del reproductor de música */
+.audio-player {
+  background-color: #1295e7;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los controles del reproductor de música */
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los botones del reproductor de música */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
+  color: #333; /* Color de los íconos */
+  transition: color 0.3s ease;
+  background-color: #2b8ba3; /* Color de fondo del botón */
+  border-radius: 5px; /* Borde redondeado */
+  padding: 5px; /* Espaciado interior */
+}
+
+button:hover {
+  color: #666; /* Color de los íconos al pasar el mouse */
+}
+
+/* Estilos para el botón de reproducción */
+button#playPauseBtn {
+  background-color: #4cb0c9; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none;
+  padding: 10px 20px; /* Espaciado interior */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button#playPauseBtn:hover {
+  background-color: #2b8ba3; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el texto "DALE PLAY" */
+.audio-player-container p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+/* Estilos para el nuevo contenedor */
+.nuevo-contenedor {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 300px; /* Altura del contenedor, ajusta según sea necesario */
+}
+
+/* Estilo para la imagen dentro del nuevo contenedor */
+.nuevo-contenedor img {
+  max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+}
+/* Estilos para el nuevo contenedor */
+.nuevo-contenedor {
+    margin-bottom: 20px; /* Agrega un margen inferior */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+/* Estilo para la imagen dentro del nuevo contenedor */
+.nuevo-contenedor img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+/* Estilos para los perfiles de los participantes */
+.participant {
+    margin-bottom: 20px; /* Agrega un margen inferior */
+}
+/* Estilos generales */
+
+/* Estilos para tabletas */
+@media (max-width: 768px) {
+  /* Estilos específicos para tabletas */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 576px) {
+  /* Estilos específicos para dispositivos móviles */
+}
