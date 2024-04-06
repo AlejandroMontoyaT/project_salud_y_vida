@@ -111,76 +111,143 @@
    ------------------------ Finaliza Navbar ------------------------------->
 </header>
 
-<div class="container">
-  <h1 class="my-5">New Item</h1>
-  <div class="row">
-    <div class="col">
-      <form id="newItemForm">
-        <div class="form-group">
-          <label for="newItemId">Id producto</label>
-          <input type="text" class="form-control" id="newItemId">
-        </div>
-        <div class="form-group">
-          <label for="newItemName">Nombre</label>
-          <input type="text" class="form-control" id="newItemName"> </input>
-        </div>
-        <div class="form-group">
-          <label for="newItemDescription">Descripcion</label>
-          <textarea type="text" class="form-control" id="newItemDescription"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="newItemImageUrl">URL imagen</label>
-          <input type="text" class="form-control" id="newItemImageUrl">
-        </div>
-        <div class="form-group">
-          <label for="newItemPrice">Precio</label>
-          <input type="number" class="form-control" id="newItemPrice">
-        </div>
-        <div class="form-group">
-          <label for="newItemPieces">Piezas a agregar</label>
-          <input type="number" class="form-control" id="newItemPieces">
-        </div>
-        <div class="form-group">
-          <label for="newItemBrand">Marca</label>
-          <select class="form-select" aria-label="Marca" id="newItemBrand">
-            <option selected>Selecciona</option>
-            <option value="Carolina Herrera">Carolina Herrera</option>
-            <option value="Boy London">Boy London</option>
-            <option value="Oggi">Oggi</option>
-            <option value="Back">Back</option>
-            <option value="Steve Madden">Steve Madden</option>
-            <option value="Pepe Jeans">Pepe Jeans</option>
-            <option value="Lucky Brand">Lucky Brand</option>
-            <option value="Christian Siriano">Christian Siriano</option>
-            <option value="Cosmopolitan">Cosmopolitan</option>
-            <option value="Brizzant">Brizzant</option>
-            <option value="Eno">Eno</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="newItemModel">Modelo</label>
-          <input type="text" class="form-control" id="newItemModel">
-        </div>
-        <div class="form-group">
-          <label for="newItemSKU">SKU</label>
-          <input type="text" class="form-control" id="newItemSKU">
-        </div>
-        <div class="form-group">
-          <label for="newItemGender">Genero</label>
-          <select class="form-select" aria-label="newItemGender">
-            <option selected>Selecciona</option>
-            <option value="1">Unisex</option>
-            <option value="2">Dama</option>
-            <option value="3">Infantil</option>
-          </select>
-        </div>
+<section>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9 col-xl-8">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-4 d-none d-md-block">
+              <img
+                      src="https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg"
+                      alt="login form"
+                      class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"
+              />
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="card-body p-2">
+                <form id="newItemForm">
+                  <h1 class="h2">Agrega Productos</h1>
+                  <p class="mb-1" style="color: #45526e;">Ingresa la informacion para agregar un nuevo producto</p>
+                  <div class="row">
+                    <div class="col-3">
+                    <div class="form-floating mb-1 mt-1">
+                      <label for="newItemId">Id producto</label>
+                      <input type="text" class="form-control" id="newItemId" placeholder="Id">
+                    </div>
+                    </div>
+                    <div class="col-9">
+                  <div class="form-floating mb-1 mt-1">
+                    <label class= "form-label" for="newItemName">Nombre</label>
+                    <input type="text" class="form-control" id="newItemName" placeholder="Nombre">
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-1 mt-1">
+                        <span class="input-group-text"><label class="form-label" for="newItemDescription">Descripción</label></span>
+                        <textarea type="text" class="form-control" id="newItemDescription"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                    <div class="input-group mb-1 mt-1">
+                      <label class="form-label" for="newItemImageUrl"></label>
+                      <span class="input-group-text" >URL</span>
+                      <input type="text" class="form-control" id="newItemImageUrl">
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="form-group">
+                        <label class="form-label" for="newItemPrice">Precio</label>
+                        <input type="number" class="form-control" id="newItemPrice">
+                      </div>
+                    </div>
+                      <div class="col-4">
+                      <div class="form-group">
+                        <label class="form-label" for="newItemPieces">Piezas a agregar</label>
+                        <input type="number" class="form-control" id="newItemPieces">
+                      </div>
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="newItemBrand">Marca</label>
+                        <select class="form-select" id="newItemBrand">
+                          <option selected disabled value="">Marca</option>
+                          <option value="1">Carolina Herrera</option>
+                          <option value="2">Boy London</option>
+                          <option value="3">Oggi</option>
+                          <option value="4">Back</option>
+                          <option value="5">Steve Madden</option>
+                          <option value="6">Pepe Jeans</option>
+                          <option value="7">Lucky Brand</option>
+                          <option value="8">Christian Siriano</option>
+                          <option value="9">Cosmopolitan</option>
+                          <option value="10">Brizzant</option>
+                          <option value="11">Eno</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <div class="col">
+                    <label for="newItemModel">Modelo</label>
+                    <input type="text" class="form-control" id="newItemModel">
+                  </div>
+                  <div class="col">
+                    <label for="newItemSKU">SKU</label>
+                    <input type="text" class="form-control" id="newItemSKU">
+                  </div>
+                  <div class="col">
+                    <h6 class="form-label">Genero</h6>
+
+                    <div class="form-check form-check-inline">
+                      <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="UnisexGender"
+                              value="option1"
+                      />
+                      <label class="form-check-label" for="UnisexGender">Unisex</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="FemaleGender"
+                              value="option1"
+                      />
+                      <label class="form-check-label" for="FemaleGender">Dama</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="InfantGender"
+                              value="option1"
+                      />
+                      <label class="form-check-label" for="InfantGender">Infantes</label>
+                    </div>
+                    </div>
+
+                  </div>
 
 
-        <button type="submit" class="btn btn-primary btn-block">Save Item</button>
-      </form>
+                  <button type="submit" class="btn btn-primary btn-block">Save Item</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <footer class="footer container-fluid">
   <div class="row justify-content-evenly align-items-center">
