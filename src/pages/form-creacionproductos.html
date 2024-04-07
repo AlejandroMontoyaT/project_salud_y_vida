@@ -116,7 +116,7 @@
     <div class="row justify-content-center">
       <div class="col-12 col-lg-9 col-xl-8">
         <div class="card" style="border-radius: 1rem;">
-          <div class="row g-0">
+          <div class="row ">
             <div class="col-md-4 d-none d-md-block">
               <img
                       src="https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg"
@@ -125,27 +125,29 @@
               />
             </div>
             <div class="col-md-8 d-flex align-items-center">
-              <div class="card-body p-2">
+              <div class="card-body py-0">
                 <form id="newItemForm">
-                  <h1 class="h2">Agrega Productos</h1>
+                  <h1 class="h2 mt-0 ">Agrega Productos</h1>
                   <p class="mb-1" style="color: #45526e;">Ingresa la informacion para agregar un nuevo producto</p>
                   <div class="row">
-                    <div class="col-3">
-                    <div class="form-floating mb-1 mt-1">
-                      <label for="newItemId">Id producto</label>
-                      <input type="text" class="form-control" id="newItemId" placeholder="Id">
+                    <div class="col-5">
+                      <div class="input-group mb-1 mt-1">
+                        <label for="newItemId"></label>
+                        <span class="input-group-text ps-1" >ID producto</span>
+                        <input type="text" class="form-control pe-0" id="newItemId" placeholder="Id" required>
+                      </div>
                     </div>
+                    <div class="col-7">
+                      <div class="input-group mb-1 mt-1">
+                        <label class= "form-label" for="newItemName"></label>
+                        <span class="input-group-text" >Nombre</span>
+                        <input type="text" class="form-control" id="newItemName" placeholder="Nombre" required>
+                      </div>
                     </div>
-                    <div class="col-9">
-                  <div class="form-floating mb-1 mt-1">
-                    <label class= "form-label" for="newItemName">Nombre</label>
-                    <input type="text" class="form-control" id="newItemName" placeholder="Nombre">
-                  </div>
-                  </div>
                   </div>
                   <div class="row">
                     <div class="col">
-                      <div class="input-group mb-1 mt-1">
+                      <div class="input-group mb-1 mt-1 ps-0">
                         <span class="input-group-text"><label class="form-label" for="newItemDescription">Descripción</label></span>
                         <textarea type="text" class="form-control" id="newItemDescription"></textarea>
                       </div>
@@ -153,96 +155,105 @@
                   </div>
                   <div class="row">
                     <div class="col">
-                    <div class="input-group mb-1 mt-1">
-                      <label class="form-label" for="newItemImageUrl"></label>
-                      <span class="input-group-text" >URL</span>
-                      <input type="text" class="form-control" id="newItemImageUrl">
-                    </div>
+                      <div class="input-group mb-1 mt-1">
+                        <label class="form-label" for="newItemImageUrl"></label>
+                        <span class="input-group-text" >URL</span>
+                        <input type="text" class="form-control" id="newItemImageUrl" required>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-3">
-                      <div class="form-group">
-                        <label class="form-label" for="newItemPrice">Precio</label>
-                        <input type="number" class="form-control" id="newItemPrice">
+                    <div class="col-7">
+                      <div class="input-group">
+                        <label class="form-label" for="newItemPrice"></label>
+                        <span class="input-group-text" >Precio $</span>
+                        <input type="number" class="form-control" id="newItemPrice" required>
                       </div>
                     </div>
-                      <div class="col-4">
-                      <div class="form-group">
-                        <label class="form-label" for="newItemPieces">Piezas a agregar</label>
-                        <input type="number" class="form-control" id="newItemPieces">
+                    <div class="col-5">
+                      <div class="input-group">
+                        <label class="form-label" for="newItemPieces"></label>
+                        <span class="input-group-text" >#Piezas</span>
+                        <input type="number" class="form-control" id="newItemPieces" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="input-group mb-1 mt-1">
+                        <label class="form-label" for="newItemBrand"></label>
+                        <select class="form-select" id="newItemBrand" required>
+                          <option selected disabled value="">Marca</option>
+                          <option value="Carolina Herrera">Carolina Herrera</option>
+                          <option value="Boy London">Boy London</option>
+                          <option value="Oggi">Oggi</option>
+                          <option value="Back">Back</option>
+                          <option value="Steve Madden">Steve Madden</option>
+                          <option value="Pepe Jeans">Pepe Jeans</option>
+                          <option value="Lucky Brand">Lucky Brand</option>
+                          <option value="Christian Siriano">Christian Siriano</option>
+                          <option value="Cosmopolitan">Cosmopolitan</option>
+                          <option value="Brizzant">Brizzant</option>
+                          <option value="Eno">Eno</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="input-group mb-1 mt-1">
+                        <label class="form-label" for="newItemModel"></label>
+                        <span class="input-group-text">Modelo</span>
+                        <input type="text" class="form-control" id="newItemModel" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="input-group mb-1 mt-1">
+                        <label for="newItemSKU"></label>
+                        <span class="input-group-text">SKU</span>
+                        <input type="text" class="form-control" id="newItemSKU" required>
                       </div>
                     </div>
                     <div class="col-4">
-                        <label class="form-label" for="newItemBrand">Marca</label>
-                        <select class="form-select" id="newItemBrand">
-                          <option selected disabled value="">Marca</option>
-                          <option value="1">Carolina Herrera</option>
-                          <option value="2">Boy London</option>
-                          <option value="3">Oggi</option>
-                          <option value="4">Back</option>
-                          <option value="5">Steve Madden</option>
-                          <option value="6">Pepe Jeans</option>
-                          <option value="7">Lucky Brand</option>
-                          <option value="8">Christian Siriano</option>
-                          <option value="9">Cosmopolitan</option>
-                          <option value="10">Brizzant</option>
-                          <option value="11">Eno</option>
+                      <div class="input-group mb-1 mt-1">
+                        <label class="form-label" for="newItemGender"></label>
+                        <select class="form-select" id="newItemGender" required>
+                          <option selected disabled value="">Genero</option>
+                          <option value="Unisex">Unisex</option>
+                          <option value="Woman">Dama</option>
+                          <option value="Infant">Infantil</option>
                         </select>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
-                  <div class="col">
-                    <label for="newItemModel">Modelo</label>
-                    <input type="text" class="form-control" id="newItemModel">
-                  </div>
-                  <div class="col">
-                    <label for="newItemSKU">SKU</label>
-                    <input type="text" class="form-control" id="newItemSKU">
-                  </div>
-                  <div class="col">
-                    <h6 class="form-label">Genero</h6>
-
-                    <div class="form-check form-check-inline">
-                      <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="UnisexGender"
-                              value="option1"
-                      />
-                      <label class="form-check-label" for="UnisexGender">Unisex</label>
+                    <div class="col align-self-center">
+                      <button type="submit" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar producto</button>
                     </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="FemaleGender"
-                              value="option1"
-                      />
-                      <label class="form-check-label" for="FemaleGender">Dama</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                              class="form-check-input"
-                              type="radio"
-                              name="inlineRadioOptions"
-                              id="InfantGender"
-                              value="option1"
-                      />
-                      <label class="form-check-label" for="InfantGender">Infantes</label>
-                    </div>
-                    </div>
-
                   </div>
 
-
-                  <button type="submit" class="btn btn-primary btn-block">Save Item</button>
                 </form>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -322,6 +333,7 @@
         crossorigin="anonymous"></script>
 
 <script type="module" src="../js/formProductos.js"></script>
+<!--<script type="module" src="../js/formProductos_prueba.js"></script>-->
 <script type="module" src="../js/ControlProductos.js"></script>
 
 </body>
