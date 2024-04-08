@@ -41,16 +41,7 @@ import {ControlProductos} from "./ControlProductos";
         }
 
         /*
-        const idProducto = newItemId.value;
-        const name = newItemName.value;
-        const description = newItemDescription.value;
-        const imageUrl = newItemImageUrl.value;
-        const price = newItemPrice.value;
-        const pieces = newItemPieces.value;
-        const brand = newItemBrand.value;
-        const model = newItemModel.value;
-        const sku = newItemSKU.value;
-        const gender = newItemGender.value;
+
     */
 
         /*
@@ -58,16 +49,18 @@ import {ControlProductos} from "./ControlProductos";
         */
         if(isProductValid(objProducto)){
             itemsController.agregarProducto(objProducto); // si los campos son adecuados, enviar al local storage
+            // Clear the form
+            newItemId.value = '';
+            newItemName.value = '';
+            newItemDescription.value = '';
+            newItemImageUrl.value = '';
+            newItemPrice.value = '';
+            newItemPieces.value = '';
+            newItemBrand.value = '';
+            newItemModel.value = '';
+            newItemSKU.value = '';
+            newItemGender.value = '';
         }
-
-        //itemsController.agregarProducto(objProducto); // si los campos son adecuados, enviar al local storage
-
-        // Add the item to the controlProducto
-        //itemsController.agregarProducto(idProducto, name, description, imageUrl, price, pieces, model, sku);
-
-        // Clear the form
-        //newItemName.value = '';
-        //newItemDescription.value = '';
     });
 
 const isProductValid = ( newProduct ) =>{
@@ -84,9 +77,11 @@ const isProductValid = ( newProduct ) =>{
     // TODO verificar los campos
 
     if( ! isValid ) showUserError( message );
-    else showUserError( [] );
-
-    return isValid;
+    else {
+        //const success = document.getElementById("alertSuccess");
+        //success.innerHTML = `Producto agregado con exito`;
+        return isValid;
+    }
 }
 
 
@@ -95,24 +90,18 @@ const showUserError= (errorMessage)=> {
     for (let message of errorMessage) {
         alert += `<li>${message}</li>`
     }
+    const addMessages = document.getElementsByClassName('modal-body');
+    addMessages[0].innerHTML= alert;
 
-    const exampleModal = document.getElementById('exampleModal')
-    if (exampleModal) {
-        exampleModal.addEventListener('show.bs.modal', event => {
-            // Button that triggered the modal
-            const button = event.relatedTarget
-            // Extract info from data-bs-* attributes
-            const recipient = button.getAttribute('data-bs-whatever')
-            // If necessary, you could initiate an Ajax request here
-            // and then do the updating in a callback.
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal'),
+        {keyboard: false})
 
-            // Update the modal's content.
-            const modalTitle = exampleModal.querySelector('.modal-title')
-            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+    myModal.show()
 
-            modalTitle.textContent = `New message to ${recipient}`
-            modalBodyInput.value = recipient
-        })
+    var btn = document.getElementById("closeModal");
+    btn.addEventListener("click", myFunction);
+    function myFunction() {
+        myModal.hide();
     }
 
 }
