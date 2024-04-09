@@ -19,33 +19,89 @@ import {ControlProductos} from "./ControlProductos";
         const newItemImageUrl = document.querySelector('#newItemImageUrl');
         const newItemPrice = document.querySelector('#newItemPrice');
         const newItemPieces = document.querySelector('#newItemPieces');
-        //const newItemBrand = document.querySelector('#newItemBrand');
+        const newItemBrand = document.querySelector('#newItemBrand');
         const newItemModel = document.querySelector('#newItemModel');
         const newItemSKU = document.querySelector('#newItemSKU');
-        //const newItemGender = document.querySelector('#newItemGender');
+        const newItemGender = document.querySelector('#newItemGender');
 
 
-        // Get the values of the inputs // OBETENER EL VALOR DEL FORM
-        const idProducto = newItemId.value;
-        const name = newItemName.value;
-        const description = newItemDescription.value;
-        const imageUrl = newItemImageUrl.value;
-        const price = newItemPrice.value;
-        const pieces = newItemPieces.value;
-        //const brand = newItemBrand.value;
-        const model = newItemModel.value;
-        const sku = newItemSKU.value;
-        //const gender = newItemGender.value;
+        // Get the values of the inputs // OBETENER EL VALOR DEL FORM Y GUARDALOS EN UN OBJETO PARA VALIDAR
 
+        const objProducto = {
+            idProducto : newItemId.value,
+            name : newItemName.value,
+            description : newItemDescription.value,
+            imageUrl : newItemImageUrl.value,
+            price : newItemPrice.value,
+            pieces : newItemPieces.value,
+            brand : newItemBrand.value,
+            model : newItemModel.value,
+            sku : newItemSKU.value,
+            gender : newItemGender.value
+        }
+
+        /*
+
+    */
 
         /*
             Validation code here
         */
-
-        // Add the item to the controlProducto
-        itemsController.agregarProducto(idProducto, name, description, imageUrl, price, pieces, model, sku);
-
-        // Clear the form
-        newItemName.value = '';
-        newItemDescription.value = '';
+        if(isProductValid(objProducto)){
+            itemsController.agregarProducto(objProducto); // si los campos son adecuados, enviar al local storage
+            // Clear the form
+            newItemId.value = '';
+            newItemName.value = '';
+            newItemDescription.value = '';
+            newItemImageUrl.value = '';
+            newItemPrice.value = '';
+            newItemPieces.value = '';
+            newItemBrand.value = '';
+            newItemModel.value = '';
+            newItemSKU.value = '';
+            newItemGender.value = '';
+        }
     });
+
+const isProductValid = ( newProduct ) =>{
+    let isValid = true;
+    const message = [];
+    if( (newProduct.price <= 0)  ){
+        isValid = false;
+        message.push("El precio no puede ser menor de 0");
+    }
+    if( (newProduct.pieces <= 0)  ){
+        isValid = false;
+        message.push("Debe haber al menos una pieza");
+    }
+    // TODO verificar los campos
+
+    if( ! isValid ) showUserError( message );
+    else {
+        //const success = document.getElementById("alertSuccess");
+        //success.innerHTML = `Producto agregado con exito`;
+        return isValid;
+    }
+}
+
+
+const showUserError= (errorMessage)=> {
+    let alert = "";
+    for (let message of errorMessage) {
+        alert += `<li>${message}</li>`
+    }
+    const addMessages = document.getElementsByClassName('modal-body');
+    addMessages[0].innerHTML= alert;
+
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal'),
+        {keyboard: false})
+
+    myModal.show()
+
+    var btn = document.getElementById("closeModal");
+    btn.addEventListener("click", myFunction);
+    function myFunction() {
+        myModal.hide();
+    }
+
+}

@@ -1,7 +1,7 @@
 
 const sampleCatalog = [{
-        'id_producto':'1',
-        'nombre_producto':'Armazon ',
+        'id_producto':'OG 469',
+        'nombre_producto':'OGGI ',
         'img':'https://i.ibb.co/v4n9TSs/imagen-2024-04-02-160544835.png',
         'descripcion_p':'Orange and Apple juice fresh and delicious',
         'precio_p': '500',

@@ -8,20 +8,20 @@ class ControlProductos {
     }
 
     // Create the addItem method
-    agregarProducto(idProducto,  name, description, imageUrl, price, pieces, model, sku) {
+    agregarProducto(nuevoProducto) {
         const item = {
             // Increment the currentId property
             id: this.currentId++,
-            idProducto: idProducto,
-            name: name,
-            description: description,
-            imageUrl: imageUrl,
-            price: price,
-            pieces: pieces,
-            //brand: brand,
-            model: model,
-            sku: sku
-            //gender: gender
+            idProducto: nuevoProducto.idProducto,
+            name: nuevoProducto.name,
+            description: nuevoProducto.description,
+            imageUrl: nuevoProducto.imageUrl,
+            price: nuevoProducto.price,
+            pieces: nuevoProducto.pieces,
+            brand: nuevoProducto.brand,
+            model: nuevoProducto.model,
+            sku: nuevoProducto.sku,
+            gender: nuevoProducto.gender
         };
 
         // Push the item to the items property
