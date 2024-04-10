@@ -1,5 +1,5 @@
 // Import our custom CSS
-import '../../styles.scss'
+import '../../styles.scss';
 
 const carrusel = document.getElementById("carrusel");
 carrusel.innerHTML = `
@@ -34,7 +34,7 @@ carrusel.innerHTML = `
     </div>
 </section>
 
-`
+`;
 
 const barranavegacion = document.getElementById('barranavegacion');
 barranavegacion.innerHTML =
@@ -74,7 +74,7 @@ barranavegacion.innerHTML =
             <a class="nav-link" href="./contactos.html">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pag-nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./pag-nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./form-creacionproductos.html">Agregar productos</a>
@@ -99,7 +99,7 @@ barranavegacion.innerHTML =
     </div>
     </nav>
   </nav>
-`
+`;
 
 const piedepagina = document.getElementById('piedepagina');
 piedepagina.innerHTML =
@@ -165,4 +165,4 @@ piedepagina.innerHTML =
     <div class="col-6 m-0 p-3"><p class="company-name m-0 align-content-center">&copy; 2024 Salud y Vida.</p></div>
   </div>
 </footer>
-    `
+    `;
