@@ -1,6 +1,7 @@
 main{
   min-height: calc(100vh - (100px + 50px));
   min-height: calc(85vh);
+  
 }
 
 /* Estilos para el contenedor del carrusel */
@@ -195,9 +196,111 @@ ul {
   size: 1vw;
 }
 
+.contenedor {
+  position: relative;
+}
 
-@media screen and (max-width:350px) {
-  /* 
-  codigo para la resposividad dependiendo del tamaño de la pantalla que elijamos via pixeles
-  */
+.contenedor p {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-weight: bold;
+  color: #003A5D;
+}
+
+.contenedor h2 {
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  Font-weight: bold;
+  color: #003A5D;
+}
+.tab-pane p {
+  padding: 10px;
+  background-color: #07778b79;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #003A5D;
+}
+
+.nav-text {
+  color:#003A5D;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+@media (min-width:1050px) and (max-width:1200px) {
+  .contenedor p {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    color: #003A5D;
+  }
+  
+  .contenedor h2 {
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    Font-weight: bold;
+    color: #003A5D;
+  }
+}
+.tabs{
+  padding: 0 75px;
+}
+
+@media (min-width:900px) and (max-width:1050px) {
+  .contenedor p {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    color: #003A5D;
+  }
+  
+  .contenedor h2 {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    Font-weight: bold;
+    color: #003A5D;
+  }
+
+  .tabs{
+    padding: 0;
+  }
+}
+
+
+
+@media screen and (max-width:900px) {
+
+  .contenedor {
+    position: relative;
+  }
+  .contenedor p {
+   position: relative;
+   transform: translate(0%, 0%);
+   top: 0%;
+   left: 0%;
+   background-color: #07778b79;
+   border-radius: 0 1rem;
+   padding: 5px 2rem 0;
+  }
+  .tabs{
+    padding: 0;
+  }
 }
