@@ -4,14 +4,9 @@ main{
   
 }
 
-/* Estilos para el contenedor del carrusel */
-.carousel-container {
-  width: 100%; /* Cambiado para ocupar todo el ancho */
-  overflow: hidden;
-}
 
 /* Estilos para los elementos del carrusel */
-.carousel-item {
+#banner .carousel-item {
  
   white-space: nowrap;
   overflow: hidden;
@@ -19,12 +14,12 @@ main{
 
 
 /* Estilos para el carrusel */
-.carousel {
+#banner .carousel {
 	color: Black;
     white-space: normal;
     overflow: hidden; 
 }
-.carousel p {
+#banner .carousel p {
   display: inline-block;
   padding-left: 100%;
   animation: marquee 15s linear infinite;

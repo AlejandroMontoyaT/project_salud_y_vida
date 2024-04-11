@@ -1,116 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sobre Nosotros</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="../js/barraFooter.js"></script>
-  <script src="../js/carousel.js"></script>
-  <link rel="stylesheet" href="../../style.css">
-  
-</head>
-<header>
-  <div id="carrusel">
-  </div>
-  <div id="barranavegacion">
-  </div>
-</header>
-<body>
-  <main>
-<div class="row d-flex justify-content-around align-content-center text-wrap">
-  <div class="contenedor mt-3 col-12 col-sm-12">
-    <div class="text-center">
-      <img class="img-fluid" src="../../assets/img/imgsobrenosotros.png" alt="">
-    </div><h2>Acerca de nosotros</h2> <p>Somos una óptica comprometida con la salud visual en Texcoco, Estado de México, desde 2017. Ofrecemos consultas de optometría y servicios integrales con atención personalizada. Nos enorgullece proporcionar una amplia selección de lentes y monturas de alta calidad para adaptarse a cada estilo de vida.</p>
-  </div>
-</div>
-<div class="tabs mt-5">
-  <ul class="nav nav-tabs nav-fill justify-content-around nav-text" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Mision</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Vision</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Valores</button>
-    </li>
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><p>Ofrecemos servicios optometría de calidad en Texcoco, priorizando la salud visual comunitaria con soluciones personalizadas. Nos comprometemos a brindar atención oftalmológica integral, accesible y centrada en el paciente para mejorar el bienestar visual de todos.</p></div>
-    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><p>Es ser líderes en la promoción de la salud ocular, mejorando la calidad de vida de quienes confían en nosotros, y ser un pilar en la prevención y tratamiento de problemas visuales.</p></div>
-    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><p>En nuestra clínica optométrica en Texcoco, nos regimos por valores fundamentales que incluyen accesibilidad, calidad y empatía. Priorizamos la excelencia en nuestros servicios y nos esforzamos por eliminar barreras económicas y geográficas para la atención visual. </p></div>
-  </div>
-</div>
-<!--
-<div class="container text-center my-3">
-  <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
-  <div class="row mx-auto my-auto">
-      <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-          <div class="carousel-inner w-100" role="listbox">
-              <div class="carousel-item active">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="http://placehold.it/380?text=1">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="http://placehold.it/380?text=2">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="http://placehold.it/380?text=3">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="">
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="col-md-4">
-                      <div class="card card-body">
-                          <img class="img-fluid" src="">
-                      </div>
-                  </div>
-              </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sobre Nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="../js/barraFooter.js"></script>
+    <script src="../js/carousel.js"></script>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../styles/nosotros.js" />
+  </head>
+  <header>
+    <div id="carrusel"></div>
+    <div id="barranavegacion"></div>
+  </header>
+  <body>
+    <main>
+      <div class="row d-flex justify-content-around align-content-center text-wrap">
+        <div class="contenedor mt-3 col-12 col-sm-12">
+          <div class="text-center">
+            <img class="img-fluid" src="../../assets/img/imgsobrenosotros.png" alt="Nosotros"/>
           </div>
-          <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-          </a>
+          <h2>Acerca de nosotros</h2>
+          <p>
+            Somos una óptica comprometida con la salud visual en Texcoco, Estado
+            de México, desde 2017. Ofrecemos consultas de optometría y servicios
+            integrales con atención personalizada. Nos enorgullece proporcionar
+            una amplia selección de lentes y monturas de alta calidad para
+            adaptarse a cada estilo de vida.
+          </p>
+        </div>
       </div>
-  </div>
-  <h5 class="mt-2">Advances one slide at a time</h5>
-</div>
--->
-  </main>
-  <footer class="footer container-fluid">
-    <div id="piedepagina">
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../js/nosotros.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
+      <div class="tabs mt-5">
+        <ul class="nav nav-tabs nav-fill justify-content-around nav-text" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+              Mision
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+              Vision
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab"
+              aria-controls="contact-tab-pane"
+              aria-selected="false"
+            >
+              Valores
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <p>
+              Ofrecemos servicios optometría de calidad en Texcoco, priorizando
+              la salud visual comunitaria con soluciones personalizadas. Nos
+              comprometemos a brindar atención oftalmológica integral, accesible
+              y centrada en el paciente para mejorar el bienestar visual de
+              todos.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <p>
+              Es ser líderes en la promoción de la salud ocular, mejorando la
+              calidad de vida de quienes confían en nosotros, y ser un pilar en
+              la prevención y tratamiento de problemas visuales.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <p>
+              En nuestra clínica optométrica en Texcoco, nos regimos por valores
+              fundamentales que incluyen accesibilidad, calidad y empatía.
+              Priorizamos la excelencia en nuestros servicios y nos esforzamos
+              por eliminar barreras económicas y geográficas para la atención
+              visual.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Carrusel de personal-->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-dialog ">
+            <div class="modal-content text-bg-dark">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Biografia</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-wrap" id="texto-modal">
+              
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-center ">Nuestro Equipo</h3>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        </div>
+        <div class="carousel-inner">
+          <div id="card-personal"></div>
+        </div>
+        <button class="carousel-control-prev bg-info" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-info" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Aqui termina-->
+    </main>
+    <footer class="footer container-fluid">
+      <div id="piedepagina"></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/nosotros.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
