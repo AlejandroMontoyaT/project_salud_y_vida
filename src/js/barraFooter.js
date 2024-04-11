@@ -86,13 +86,13 @@ barranavegacion.innerHTML =
             <a class="nav-link" href="./busqueda.html"><img src="../../assets/img/zoom_out_icon_152713.png" alt="Buscar"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./login-registro.html"><img src="../../assets/img/users_icon_152726.png" alt="Login"></a>
+            <a class="nav-link" href="./login-registro.html"><img src="../../assets/img/users_icon_152726.png" title="Tu perfil" alt="Login"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" alt="Whishlist"></a>
+            <a class="nav-link" href="./mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" title="Tus favoritos" alt="Whishlist"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" alt="Carrito"></a>
+            <a class="nav-link" href="./carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" title="Tu Carr alt="Carrito"></a>
           </li>
         </ul>
       </div>
