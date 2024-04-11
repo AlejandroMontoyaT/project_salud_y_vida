@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="#"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salud y Vida</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./styles.scss">
-</head>
-<body>
-<header>
- <!--  carousel inicio  -->
-  <section id="banner" class="static">
+// Import our custom CSS
+import '../../styles.scss';
+
+const carrusel = document.getElementById("carrusel");
+carrusel.innerHTML = `
+
+ <section id="banner" class="static">
     <div class="row">
-        <div id="banner-promo" class="col-12 col-md-6 bg-info rounded-4 align-items-center mx-auto">
+        <div id="banner-promo" class="col-12 col-md-9 bg-info rounded-4 align-items-center mx-auto">
             <div id="carouselExampleIndicators" class="carousel slide w-150" data-ride="carousel">     
                 <div class="carousel-inner">
                     <div class="carousel-item">
@@ -41,83 +34,80 @@
     </div>
 </section>
 
-<!-- Fin del carousel  -->
+`;
 
-<!-------------------------- Inicia Navbar ------------------------------->
-<div class="row d-flex justify-content-end">
-  <div class="d-flex justify-content-end">
-    <a class="p-2" href="./src/pages/login-registro.html"><img src="./assets/img/users_icon_152726.png" alt="Login" style="width: 25px;"></a>
-    <a class="p-2" href="./src/pages/mi-perfil.html"><img src="./assets/img/heart_icon_152827.png" alt="Whishlist" style="width: 25px;"></a>
-    <a class="p-2" href="./src/pages/carrito-compras.html"><img src="./assets/img/truck_icon_152733.png" alt="Carrito" style="width: 25px;"></a>
-  </div>
-</div>
-
-
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <nav class="container-fluid pl-1">
-        <a class="" href="./index.html"><img class="" src="./assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>  
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <a class="" href="./index.html"><img src="./assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 100px;"></a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
-          <li class="nav-item ">
-            <a class="nav-link" href="#"><img src="./assets/img/Logo_fb_azulagua.png" alt="Facebook" style="max-width: 10px;"></a> 
+const barranavegacion = document.getElementById('barranavegacion');
+barranavegacion.innerHTML =
+    `
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white navbar-custom justify-content-around mb-sm-4">
+    <nav class="container-fluid">
+      <a class="nav-link" href="../../index.html"><img src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav social-media">    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-lg-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="../../assets/img/Logo_fb_azulagua.png" alt="Facebook" style="max-width: 10px;"></a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="./assets/img/Logo_ig_azulagua.png" alt="Instagram" style="max-width: 20px;"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/sobre-nosotros.html">Salud y Vida</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/catalogo.html">Lentes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/agenda-cita.html">Agenda tu cita</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/sucursal.html">Visítanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/contactos.html">Contáctanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/src/pages/pag-nosotros.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/pages/form-creacionproductos.html">Agregar productos</a>
-          </li>
-          <li class="nav-item">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-              <button class="btn btn-outline-info" type="submit">Search</button>
-            </form>
+            <a class="nav-link" href="#"><img src="../../assets/img/Logo_ig_azulagua.png" alt="Instagram" style="max-width: 20px;"></a>
           </li>
         </ul>
-          </div>
       </div>
-      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre-nosotros.html">Salud y Vida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./catalogo.html">Lentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./agenda-cita.html">Agenda tu cita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sucursal.html">Visítanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactos.html">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pag-nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./form-creacionproductos.html">Agregar productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./testNavFooter.html">Test Navbar y footer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./busqueda.html"><img src="../../assets/img/zoom_out_icon_152713.png" alt="Buscar"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./login-registro.html"><img src="../../assets/img/users_icon_152726.png" alt="Login"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" alt="Whishlist"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" alt="Carrito"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
     </nav>
   </nav>
+`;
 
-<!-------------------------- Finaliza Navbar ------------------------------->
-
-</header>
-  <main>
-   
-   
-  </main>
-
-  <footer class="footer container-fluid">
+const piedepagina = document.getElementById('piedepagina');
+piedepagina.innerHTML =
+    `
+      <footer class="footer container-fluid">
     <div class="row justify-content-evenly align-items-center">
     <div class="col-md-2 col-2">
-      <img class="img-fluid rounded mt-5" src="assets/img/Logo azul prusiano.png " alt="Logo saludyvida"
+      <img class="img-fluid rounded mt-5" src="../../assets/img/Logo azul prusiano.png " alt="Logo saludyvida"
         style="width: 100px; height: auto;">
       <p class="company-name1 mt-3">Todos los derechos reservados</p>
     </div>
@@ -162,9 +152,9 @@
       <h5 class="mt-5">Síguenos</h5>
       <ul class="nav flex-column">
         <li class="mt-3">
-          <a href="#" ><img class="img-fluid rounded" src="assets/img/Logo_fb_azulprus.png" alt="Facebook"
+          <a href="#" ><img class="img-fluid rounded" src="../../assets/img/Logo_fb_azulprus.png" alt="Facebook"
             style="width: 10px; height: auto;"></a>
-          <a href="#" class=" m-lg-3"><img class="img-fluid rounded" src="assets/img/Logo_ig_azulprus.png" alt="Instragram"
+          <a href="#" class=" m-lg-3"><img class="img-fluid rounded" src="../../assets/img/Logo_ig_azulprus.png" alt="Instragram"
             style="width: 20px; height: auto;"></a>
         </li>
         <br>
@@ -175,9 +165,4 @@
     <div class="col-6 m-0 p-3"><p class="company-name m-0 align-content-center">&copy; 2024 Salud y Vida.</p></div>
   </div>
 </footer>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="module" src="/main.js"></script>
-<script src="./src/js/carousel.js"></script>
-</body>
-</html>
+    `;

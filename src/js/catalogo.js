@@ -1,5 +1,4 @@
 const sampleCatalog = [{
-
     'id_producto':'1',
     'nombre_producto':'OGGI 469',
     'img':"../../../assets/img/lentes/01 Oggi.png",
