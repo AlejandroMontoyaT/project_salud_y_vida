@@ -8,100 +8,62 @@
   <script type="module" src="../js/barraFooter.js"></script>
   <script src="../js/carousel.js"></script>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-   <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+  <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
- 
 </head>
 <body>
   <header>
-<!-------------Esta página no lleva header-----------------------
-    <div id="carrusel"></div>
-    <div id="barranavegacion"></div>
------------------------------------------------------------->
-
-  <!-------------------------- Inicia Navbar ------------------------------->
-  <div class="row d-flex justify-content-between p-3">
-    <a class=" justify-content-center align-content-center col-4" href="../../index.html"><img class="img-fluid" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;" ></a>
-   <nav class=" col-2 navbar navbar-expand-lg navbar-dark bg-white navbar-custom text-black mb-sm-4">
-     <nav class="container-fluid ">
-       <button class="btn btn-lg btn-info mt-1 align-items-center"><a class="nav-link text-black" href="../../index.html">Regresar</a></button>
-       
-     </nav>
-   </nav>
-  </div>
-
- <!--  ------------------------ Finaliza Navbar ------------------------------->
+    <!-------------------------- Inicia Navbar ------------------------------->
+    <div class="row d-flex justify-content-between p-3">
+      <a class="justify-content-center align-content-center col-4" href="../../index.html"><img class="img-fluid" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;"></a>
+      <nav class="col-2 navbar navbar-expand-lg navbar-dark bg-white navbar-custom text-black mb-sm-4">
+        <nav class="container-fluid">
+          <button class="btn btn-lg btn-info mt-1 align-items-center"><a class="nav-link text-black" href="../../index.html">Regresar</a></button>
+        </nav>
+      </nav>
+    </div>
+    <!--  ------------------------ Finaliza Navbar ------------------------------->
   </header>
 
   <main>
-    <div class="row justify-content-md-center justify-content-sm-center mt-5">
-      <div class="col-md-auto col-sm-auto justify-content-md-center justify-content-sm-center d-none d-sm-block">
-        <img class="img-fluid imgcontact m-2 rounded p-1 justify-content-sm-center"
-          src="../../assets/img/close-up-corrective-spectacle-snellen-chart.jpg" alt="">
-      </div>
-      <div class="col-md-auto col-sm-auto p-2 m-2 mt-sm-auto justify-content-sm-center" id="registrationFormContainer">
-        <form action="#" method="POST" id="registrationForm">
-          <fieldset class="col-md-auto col-sm-auto">
-            <legend>Registrate</legend>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid imgcontact m-5 rounded" src="/assets/img/anteojos-pulgar-arriba-haciendo-signo-ok_432566-11158.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+          <form id="registrationForm">
             <div class="form-group">
-              <label for="nameUser" class="form-label">Nombre</label>
-              <input type="text" id="nameUser" name="name" class="form-control mb-1" placeholder="Nombre" required>
+              <label for="fullName">Nombre completo</label>
+              <input type="text" class="form-control" id="fullName" required>
             </div>
             <div class="form-group">
-              <label for="lastName" class="form-label">Apellidos</label>
-              <input type="text" id="lastName" name="lastName" class="form-control mb-1" placeholder="Apellidos" required>
+              <label for="phoneNumber">Número de teléfono</label>
+              <input type="tel" class="form-control" id="phoneNumber" required>
             </div>
             <div class="form-group">
-              <label for="dateOfBirth" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control mb-1" required>
+              <label for="email">Email (nombre de usuario)</label>
+              <input type="email" class="form-control" id="email" required>
             </div>
             <div class="form-group">
-              <label for="gender" class="form-label">Género</label>
-              <select id="gender" name="gender" class="form-control mb-1" required>
-                <option value="">Selecciona un género</option>
-                <option value="male">Hombre</option>
-                <option value="female">Mujer</option>
-                <option value="other">Otro</option>
-              </select>
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" id="password" required>
             </div>
             <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-control mb-1" placeholder="email@email.com" required>
+              <label for="confirmPassword">Confirmar contraseña</label>
+              <input type="password" class="form-control" id="confirmPassword" required>
             </div>
-            <div class="form-group">
-              <label for="address" class="form-label">Tu dirección</label>
-              <input type="text" id="address" name="address" class="form-control mb-1" placeholder="Tu dirección" required>
-            </div>
-            <div class="form-group">
-              <label for="zipCode" class="form-label">Código Postal</label>
-              <input type="text" id="zipCode" name="zipCode" class="form-control mb-1" placeholder="CP" required>
-            </div>
-            <div class="form-group">
-              <label for="city" class="form-label">Tu ciudad</label>
-              <input type="text" id="city" name="city" class="form-control mb-1" placeholder="Tu Ciudad" required>
-            </div>
-            <div class="form-group">
-              <label for="state" class="form-label">Tu estado</label>
-              <input type="text" id="state" name="state" class="form-control mb-1" placeholder="Tu estado" required>
-            </div>
-            <div class="form-group">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" id="password" name="password" class="form-control mb-1" placeholder="******" required>
-            </div>
-            <br>
-            <button type="submit" class="btn" style="background-color: #003A5D;" id="submitContact">Registrarte</button>
-          </fieldset>
-        </form>
-        <div id="successMessage" class="d-none">
-          <h3>¡Gracias por registrarte!</h3>
-          <p>Revisa tu correo electrónico para confirmar tus datos.</p>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </form>
         </div>
       </div>
     </div>
+
     <div class="row mt-5 d-flex justify-content-center">
       <div class="col-auto d-flex align-items-center mr-3">
         <img src="../../assets/img/call_FILL0_wght300_GRAD0_opsz24.png" alt="telefono" class="m-lg-1">
@@ -127,39 +89,70 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('registrationForm');
-      const formContainer = document.getElementById('registrationFormContainer');
-      const successMessage = document.getElementById('successMessage');
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
+      var fullName = document.getElementById('fullName').value;
+      var phoneNumber = document.getElementById('phoneNumber').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
 
-        const formData = new FormData(event.target);
-        const data = {};
-        for (const [key, value] of formData.entries()) {
-          data[key] = value;
-        }
+      // Validación de campos vacíos
+      if (fullName.trim() === '' || phoneNumber.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+        showAlert('Por favor, complete todos los campos.', 'danger');
+        return;
+      }
 
-        fetch('https://formsubmit.co/ingabrahamjv@gmail.com', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => {
-          console.log('Registro exitoso');
-          formContainer.classList.add('d-none');
-          successMessage.classList.remove('d-none');
-        })
-        .catch(error => {
-          console.error('Error al enviar el formulario:', error);
-          // Agregar cualquier lógica de manejo de errores
-        });
-      });
+      // Validación de contraseña coincidente
+      if (password !== confirmPassword) {
+        showAlert('Las contraseñas no coinciden.', 'danger');
+        return;
+      }
+
+      // Validación de correo electrónico
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showAlert('Por favor, ingrese un correo electrónico válido.', 'danger');
+        return;
+      }
+
+      // Validación del número de teléfono
+      var phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phoneNumber)) {
+        showAlert('Por favor, ingrese un número de teléfono válido (10 dígitos).', 'danger');
+        return;
+      }
+
+      // Crear objeto JSON con los datos del usuario
+      var userData = {
+        fullName: fullName,
+        phoneNumber: phoneNumber,
+        email: email,
+        password: password
+      };
+
+      // Aquí puedes realizar acciones adicionales con los datos del usuario, como enviarlos a un servidor
+
+      // Mostrar alerta de éxito
+      showAlert('Registro exitoso. ¡Bienvenido! Revisa tu correo para más información.', 'success');
+
+      // Limpiar el formulario después del registro exitoso
+      document.getElementById('registrationForm').reset();
     });
+
+    function showAlert(message, type) {
+      var alertContainer = document.createElement('div');
+      alertContainer.className = 'alert alert-' + type;
+      alertContainer.textContent = message;
+      document.getElementById('registrationForm').insertAdjacentElement('beforebegin', alertContainer);
+
+      setTimeout(function() {
+        alertContainer.remove();
+      }, 3000);
+    }
   </script>
 </body>
 </html>
