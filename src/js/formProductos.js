@@ -1,4 +1,6 @@
+import '../../styles.scss';
 import {ControlProductos} from "./ControlProductos";
+
 
 //document.addEventListener("DOMContentLoaded", function() {
 // Initialize a new ItemsController with currentId set to 0
@@ -39,15 +41,12 @@ import {ControlProductos} from "./ControlProductos";
             sku : newItemSKU.value,
             gender : newItemGender.value
         }
-
-        /*
-
-    */
+        console.log(objProducto);
 
         /*
             Validation code here
         */
-        if(isProductValid(objProducto)){
+        if(isProductValid(objProducto)) {
             itemsController.agregarProducto(objProducto); // si los campos son adecuados, enviar al local storage
             // Clear the form
             newItemId.value = '';
@@ -60,7 +59,46 @@ import {ControlProductos} from "./ControlProductos";
             newItemModel.value = '';
             newItemSKU.value = '';
             newItemGender.value = '';
-        }
+
+            //showUserError(["Producto agregado con exito"]);
+            /*
+                        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+                        //const alert = (message, type) => {
+                            const wrapper = document.createElement('div')
+                            wrapper.innerHTML = `
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                   <div>Producto añadido con éxito</div>
+                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                   <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+                                </div>`;
+
+                            alertPlaceholder.append(wrapper)
+*/
+                        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                        //const appendAlert = (message, type) => {
+                            const wrapper = document.createElement('div')
+                            wrapper.innerHTML = [
+                                `<div class="alert alert-success alert-dismissible fade show" role="alert">`,
+                                `   <div>Producto agregado correctamente</div>`,
+                                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                                '</div>'
+                            ].join('')
+
+                            alertPlaceholder.append(wrapper)
+                        }
+            /*
+                        const alertTrigger = document.getElementById('liveAlertBtn')
+                        if (alertTrigger) {
+                            alertTrigger.addEventListener('click', () => {
+                                appendAlert('Producto agregado correctamente', 'success')
+                            })
+                        }
+            */
+
+
+
     });
 
 const isProductValid = ( newProduct ) =>{

@@ -6,9 +6,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Bootstrap CSS
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  -->
+
   <title>Agregar productos</title>
-  <script type="module" src="../js/barraFooter.js"></script>
-  <script src="../js/carousel.js"></script>
+  <!--<script type="module" src="../js/barraFooter.js"></script>
+  <script src="../js/carousel.js"></script>-->
   <link rel="stylesheet" href="../../style.css">
 
    <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
@@ -35,32 +40,32 @@
 </header>
 
 <section>
-  <div class="container my-5">
+  <div class="container my-3 m-xs-1">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-9 col-xl-8">
         <div class="card" style="border-radius: 1rem;">
-          <div class="row ">
+          <div class="row align-items-center">
             <div class="col-md-4 d-none d-md-block">
               <img
-                      src="https://static.pullandbear.net/2/photos//2024/V/0/1/p/8999/304/615/8999304615_2_1_8.jpg?t=1706099172347&imwidth=1024"
+                      src="https://cbu01.alicdn.com/img/ibank/2020/638/006/13343600836_1203561124.jpg"
                       alt="login form"
-                      class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; height:405px "
+                      class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; height: 450px; "
               />
             </div>
             <div class="col-md-8 d-flex align-items-center">
-              <div class="card-body py-0">
+              <div class="card-body p-3">
                 <form id="newItemForm">
-                  <h1 class="h2 mt-0 ">Agrega Productos</h1>
-                  <p class="mb-1" style="color: #45526e;">Ingresa la informacion para agregar un nuevo producto</p>
+                  <h1 class="h2 mt-0 ">Agrega productos</h1>
+                  <p class="mb-1" style="color: #45526e;">Ingresa la información para agregar un nuevo producto.</p>
                   <div class="row">
-                    <div class="col-5">
+                    <div class="col-md-5 col-xs-12">
                       <div class="input-group mb-1 mt-1">
                         <label for="newItemId"></label>
                         <span class="input-group-text ps-1" >ID producto</span>
                         <input type="text" class="form-control pe-0" id="newItemId" placeholder="Id" required>
                       </div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-md-7 col-xs-8">
                       <div class="input-group mb-1 mt-1">
                         <label class= "form-label" for="newItemName"></label>
                         <span class="input-group-text" >Nombre</span>
@@ -69,7 +74,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-12 col-xs-8">
                       <div class="input-group mb-1 mt-1 ps-0">
                         <span class="input-group-text"><label class="form-label" for="newItemDescription">Descripción</label></span>
                         <textarea type="text" class="form-control" id="newItemDescription"></textarea>
@@ -77,7 +82,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-12">
                       <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemImageUrl"></label>
                         <span class="input-group-text" >URL</span>
@@ -86,15 +91,15 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-7">
-                      <div class="input-group">
+                    <div class="col-md-7 col-xs-3">
+                      <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemPrice"></label>
                         <span class="input-group-text" >Precio $</span>
                         <input type="number" class="form-control" id="newItemPrice" required>
                       </div>
                     </div>
-                    <div class="col-5">
-                      <div class="input-group">
+                    <div class="col-md-5 col-xs-3">
+                      <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemPieces"></label>
                         <span class="input-group-text" >#Piezas</span>
                         <input type="number" class="form-control" id="newItemPieces" required>
@@ -102,7 +107,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-md-4 col-xs-4">
                       <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemBrand"></label>
                         <select class="form-select" id="newItemBrand" required>
@@ -121,7 +126,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-4">
                       <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemModel"></label>
                         <span class="input-group-text">Modelo</span>
@@ -130,14 +135,14 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8">
                       <div class="input-group mb-1 mt-1">
                         <label for="newItemSKU"></label>
                         <span class="input-group-text">SKU</span>
                         <input type="text" class="form-control" id="newItemSKU" required>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                       <div class="input-group mb-1 mt-1">
                         <label class="form-label" for="newItemGender"></label>
                         <select class="form-select" id="newItemGender" required>
@@ -151,7 +156,7 @@
                   </div>
                   <div class="row">
                     <div class="col align-self-center">
-                      <button type="submit" class="btn btn-info btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar producto</button>
+                      <button id="liveAlertBtn" type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #003A5D; color: white">Agregar producto</button>
                     </div>
                   </div>
 
@@ -160,10 +165,12 @@
             </div>
           </div>
         </div>
+        <div id="liveAlertPlaceholder" class="mt-2"></div>
       </div>
     </div>
   </div>
 </section>
+
 
   <!-- MODAL -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -181,12 +188,21 @@
       </div>
     </div>
   </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 <script type="module" src="../js/formProductos.js"></script>
 <!--<script type="module" src="../js/formProductos_prueba.js"></script>-->
 <script type="module" src="../js/ControlProductos.js"></script>
+
+
 
 </body>
 
