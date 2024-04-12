@@ -38,72 +38,70 @@ carrusel.innerHTML = `
 
 const barranavegacion = document.getElementById('barranavegacion');
 barranavegacion.innerHTML =
-    `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-white navbar-custom justify-content-around mb-sm-4">
-    <nav class="container-fluid">
-      <a class="nav-link" href="../../index.html"><img src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-nav social-media">    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-lg-5">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><img src="../../assets/img/Logo_fb_azulagua.png" alt="Facebook" style="max-width: 10px;"></a> 
+  `
+    <div class="row d-flex justify-content-end">
+  <div class="d-flex justify-content-end">
+    <a class="p-2" href="../../src/pages/login-registro.html"><img src="../../assets/img/users_icon_152726.png" title="Tu perfil" alt="Login" style="width: 25px;"></a>
+    <a class="p-2" href="../../src/pages/mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" title="Tus Favoritos" alt="Whishlist" style="width: 25px;"></a>
+    <a class="p-2" href="../../src/pages/carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" title="Tu" alt="Carrito" style="width: 25px;"></a>
+  </div>
+</div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="container-fluid pl-1">
+        <a class="" href="../../index.html"><img class="" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="" href="../../index.html"><img src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 100px;"></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1">
+          <li class="nav-item ">
+            <a class="nav-link" href="#"><img src="../../assets/img/Logo_fb_azulagua.png" title= "Facebook" alt="Facebook" style="max-width: 10px;"></a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="../../assets/img/Logo_ig_azulagua.png" alt="Instagram" style="max-width: 20px;"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./sobre-nosotros.html">Salud y Vida</a>
+            <a class="nav-link" href="#"><img src="../../assets/img/Logo_ig_azulagua.png" title="Instagram" alt="Instagram" style="max-width: 20px;"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./catalogo.html">Lentes</a>
+            <a class="nav-link" href="../../src/pages/sobre-nosotros.html">Salud y Vida</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./agenda-cita.html">Agenda tu cita</a>
+            <a class="nav-link" href="../../src/pages/catalogo.html">Lentes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./sucursal.html">Visítanos</a>
+            <a class="nav-link" href="../../src/pages/agenda-cita.html">Agenda tu cita</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contactos.html">Contáctanos</a>
+            <a class="nav-link" href="../../src/pages/sucursal.html">Visítanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pag-nosotros.html">Nosotros</a>
+            <a class="nav-link" href="../../src/pages/contactos.html">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./form-creacionproductos.html">Agregar productos</a>
+            <a class="nav-link" href="../../src/pages/pag-nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./testNavFooter.html">Test Navbar y footer</a>
+            <a class="nav-link" href="../../src/pages/form-creacionproductos.html">Agregar productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./busqueda.html"><img src="../../assets/img/zoom_out_icon_152713.png" alt="Buscar"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./login-registro.html"><img src="../../assets/img/users_icon_152726.png" title="Tu perfil" alt="Login"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" title="Tus favoritos" alt="Whishlist"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" title="Tu Carr alt="Carrito"></a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar Salud y Vida..." aria-label="Buscar">
+              <button class="btn btn-outline-info" type="submit">🔎</button>
+            </form>
           </li>
         </ul>
+          </div>
       </div>
-    </div>
     </nav>
   </nav>
 `;
 
 const piedepagina = document.getElementById('piedepagina');
 piedepagina.innerHTML =
-    `
+  `
       <footer class="footer container-fluid">
     <div class="row justify-content-evenly align-items-center">
     <div class="col-md-2 col-2">
