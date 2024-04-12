@@ -294,6 +294,11 @@ ul {
 }
 
 
+#formulario-li-r{
+  width: 50%;
+}
+
+
 
 @media screen and (max-width:900px) {
 
@@ -311,6 +316,12 @@ ul {
   }
   .tabs{
     padding: 0;
+  }
+  #formulario-li-r{
+    width: 100%;
+  }
+  #filtros{
+    display: none;
   }
 }
 
@@ -333,4 +344,3 @@ h3, h4, h5 {
   font-weight: medium;
   font-style: normal;
   }
-
