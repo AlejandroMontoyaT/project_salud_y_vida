@@ -227,15 +227,17 @@ const agregarCatalogo = () => {
           
             items.forEach(item => {
                   card.innerHTML += `<div class="col">
-                  <div class="card h-100 ">
+                  <div class="card" style="height:300px;">
                     <img src="${item.img}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">${item.nombre_producto}</h5>
-                      <p class="card-text">${item.descripcion_p}</p>
+                      <h6 class="card-title">${item.nombre_producto}</h5>
+                      <p class="card-text text-wrap overflow-y-scroll" style="height: 60px;" alt="${item.descripcion_p}">${item.descripcion_p}</p>
                     </div>
                     <div class="row justify-content-center p-2">
-                    <div class="col-8 justify-content-center align-content-center"><button class="btn btn-primary">Comprar Ahora    </button></div>
-                    <div class="col-4"><a href="#"><img class=" img-fluid w-50" src="../../assets/img/carrito temporal.jpg" alt=""></a></div>
+                    <div class="col-8 row justify-content-center align-content-center"><button class="col-9 btn btn-primary btn-sm" style">Comprar Ahora    </button></div>
+                    <div class="col-4 d-flex align-content-center justify-content-center align-items-center"><a class=" " href="#">+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                  </svg></a></div>
                   </div>
                   </div>
                 </div>

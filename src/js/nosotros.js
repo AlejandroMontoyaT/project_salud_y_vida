@@ -82,7 +82,7 @@ const agregarPersonal = () => {
             {
               card.innerHTML += `
                 <div class="carousel-item active text-center">
-            <img src="../../assets/img/${item.img}" class="img-fluid img-thumbnail" id="img-personal" alt="..." style="max-height: 550px;">
+            <img src="../../assets/img/${item.img}" class="img-fluid img-thumbnail" id="img-personal" alt="..." style="height: 550px;">
             <div class="carousel-caption d-md-block">
               <h5>${item.nombre_persona}</h5>
               <a href="${item.link_linkedln}"><img src="../../assets/img/linkdin-logo.png"  style="width:30px; background-color:White; border-radius:.5rem;"></a>
@@ -96,7 +96,7 @@ const agregarPersonal = () => {
             else{
               card.innerHTML += `
                 <div class="carousel-item text-center">
-                  <img src="../../assets/img/${item.img}" class="img-fluid img-thumbnail" alt="..." style="max-height: 550px;">
+                  <img src="../../assets/img/${item.img}" class="img-fluid img-thumbnail" alt="..." style="height: 550px;">
                   <div class="carousel-caption d-md-block">
                     <h5>${item.nombre_persona}</h5>
                     <a href="${item.link_linkedln}"><img src="../../assets/img/linkdin-logo.png" style="width:30px; background-color:White; border-radius:.5rem;"></a>

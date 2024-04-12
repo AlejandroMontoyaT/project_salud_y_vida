@@ -43,7 +43,9 @@ barranavegacion.innerHTML =
   <div class="d-flex justify-content-end">
     <a class="p-2" href="../../src/pages/login-registro.html"><img src="../../assets/img/users_icon_152726.png" title="Tu perfil" alt="Login" style="width: 25px;"></a>
     <a class="p-2" href="../../src/pages/mi-perfil.html"><img src="../../assets/img/heart_icon_152827.png" title="Tus Favoritos" alt="Whishlist" style="width: 25px;"></a>
-    <a class="p-2" href="../../src/pages/carrito-compras.html"><img src="../../assets/img/truck_icon_152733.png" title="Tu" alt="Carrito" style="width: 25px;"></a>
+    <a class="p-2 text-black" href="../../src/pages/carrito-compras.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+  </svg></a>
   </div>
 </div>
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -64,9 +66,6 @@ barranavegacion.innerHTML =
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><img src="../../assets/img/Logo_ig_azulagua.png" title="Instagram" alt="Instagram" style="max-width: 20px;"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../src/pages/sobre-nosotros.html">Salud y Vida</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../../src/pages/catalogo.html">Lentes</a>
