@@ -235,6 +235,12 @@ ul {
   font-weight: bold;
   text-decoration: none !important;
 }
+/* build your own custom Bootstrap theme:
+   https://themestr.app
+*/
+.carouselExampleControls{
+  padding:5%;
+}
 
 @media (min-width:1050px) and (max-width:1200px) {
   .contenedor p {
