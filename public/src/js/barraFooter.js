@@ -1,5 +1,5 @@
 // Import our custom CSS
-import '../../styles.scss';
+import '../../../styles.scss';
 
 document.addEventListener('DOMContentLoaded', function() {
   const carrusel = document.getElementById("carrusel");
