@@ -3,10 +3,14 @@
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
+  box-sizing: border-box;
+}
+body {
+  margin: 8%;
 }
 
-
 main{
+  margin: 10px;
   min-height: calc(100vh - (100px + 50px));
   min-height: calc(85vh);
   
@@ -52,13 +56,6 @@ main{
   height: auto; /* Altura automática para mantener la proporción */
   /*margin-top: 80px; /* Margen superior para posicionar la imagen */
   /*margin-left: 180px; /* Margen izquierdo para posicionar la imagen */
-}
-
-/* Estilos para el botón de enviar del formulario */
-#submitContact {
-  color: white; /* Color del texto */
-  border-radius: 30px; /* Borde redondeado */
-  background-color: #0f97ec; /* Color de fondo del botón */
 }
 
 /* Estilos para el  banner (barra de navegación) */
@@ -120,6 +117,11 @@ button.navbar-toggler{
 #menu{
   background-color: rgb(252, 5, 5);
   color:#1295e7;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+  margin: 0;
+  text-align: center;
 }
 
 /* Estilos para el cuerpo de la página */
@@ -323,7 +325,23 @@ ul {
   #filtros{
     display: none;
   }
+  .red-social{
+  display:none;
 }
+.contenedor-head{
+  margin:0;
+  padding: 0%;
+}
+
+#popular1,#popular2{
+  width: 100%;
+}
+#items-populares, #items-populares2{
+display: grid;
+}
+
+}
+
 
 
 
