@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div> 
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <nav class="container-fluid mx-1 my-2 justify-content-center">
+    <nav class="container-fluid mx-1 my-2 justify-content-end">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>  
