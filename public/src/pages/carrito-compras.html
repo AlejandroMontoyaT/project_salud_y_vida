@@ -1,41 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="#"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de compras</title>
-  <script type="module" src="../js/barraFooter.js"></script>
-  <script src="../js/carousel.js"></script>
-  <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="#"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <script type="module" src="../js/barraFooter.js"></script>
+    <script src="../js/carousel.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+        }
 
-   <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+        #carrito {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 600px;
+            max-width: 100%;
+            margin-top: 20px;
+        }
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
- 
+        #carrito h2 {
+            font-family: 'Aleo', serif;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
 
+        #carrito-imagen {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #carrito-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #carrito-items li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #carrito-items li:last-child {
+            border-bottom: none;
+        }
+
+        #carrito-items li span {
+            margin-right: 10px;
+        }
+
+        #carrito-items li button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #carrito-items li button:hover {
+            background-color: #d32f2f;
+        }
+
+        #total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #total p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        #checkout-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #checkout-btn:hover {
+            background-color: #1976D2;
+        }
+    </style>
 </head>
 <body>
-<header>
-
-  <div id="carrusel">
-  </div>
-
-  <div id="barranavegacion">
-  </div>
-
-  </header>
-  <main>
-   <h1>Carrito de compras</h1>
-   
-  </main>
-
-<div id="piedepagina">
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <header>
+        <div id="carrusel"></div>
+        <div id="barranavegacion"></div>
+    </header>
+    <main>
+        <div id="carrito">
+            <h2>Carrito de compras</h2>
+            <img id="carrito-imagen" src="/public/assets/img/empty-cart.png" alt="Imagen del carrito">
+            <ul id="carrito-items">
+                <!-- Aquí se mostrarán los productos agregados al carrito -->
+            </ul>
+            <div id="total">
+                <p>Total: <span id="total-amount">$0 MXN</span></p>
+                <button id="checkout-btn">Finalizar compra</button>
+            </div>
+        </div>
+    </main>
+    <div id="piedepagina"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Aquí puedes agregar el código JavaScript para la funcionalidad del carrito
+    </script>
 </body>
 </html>

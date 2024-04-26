@@ -9,6 +9,67 @@
   <script src="../js/carousel.js"></script>
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 200px);
+    }
+
+    .card {
+      width: 1000px;
+      max-width: 100%;
+      margin-top: 20px;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #f8f9fa;
+      border-bottom: none;
+    }
+
+    .nav-tabs .nav-link {
+      color: #495057;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #007bff;
+      background-color: #fff;
+      border-color: #dee2e6 #dee2e6 #fff;
+    }
+
+    .tab-content {
+      padding: 30px;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .btn-info {
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+    }
+
+    .btn-info:hover {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 500px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,7 +79,7 @@
   <main>
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class="col-md-6">
+        <div class="col-md-8">
           <div class="card">
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs">
@@ -33,25 +94,34 @@
             <div class="card-body">
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="hacer-cita">
-                  <form id="formulario-cita">
-                    <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" required>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form id="formulario-cita">
+                        <div class="mb-3">
+                          <label for="nombre" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="fecha" class="form-label">Fecha</label>
+                          <input type="date" class="form-control" id="fecha" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="hora" class="form-label">Hora</label>
+                          <input type="time" class="form-control" id="hora" required>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-info">Agendar cita</button>
+                      </form>
                     </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" required>
+                    <div class="col-md-6">
+                      <div class="image-container">
+                        <img src="/public/assets/img/Beca-Benito-Juarez-2022_-Tienes-hasta-esta-fecha-para-agendar-cita-y-registrarte-1024x631.jpg" alt="Imagen de citas">
+                      </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="fecha" class="form-label">Fecha</label>
-                      <input type="date" class="form-control" id="fecha" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="hora" class="form-label">Hora</label>
-                      <input type="time" class="form-control" id="hora" required>
-                    </div>
-                    <button type="button" class="btn btn-sm btn-info">Agendar cita</button>
-                  </form>
+                  </div>
                 </div>
                 <div class="tab-pane fade" id="tus-citas">
                   <table class="table">
@@ -61,6 +131,7 @@
                         <th>Email</th>
                         <th>Fecha</th>
                         <th>Hora</th>
+                        <th>Acción</th>
                       </tr>
                     </thead>
                     <tbody id="tabla-citas"></tbody>
@@ -77,7 +148,6 @@
     <div id="piedepagina"></div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Obtener referencias a los elementos del DOM
@@ -114,6 +184,9 @@
       // Limpiar el formulario
       formularioCita.reset();
 
+      // Mostrar mensaje de éxito
+      alert('Tu cita está agendada correctamente.');
+
       // Mostrar las citas agendadas
       mostrarCitas();
     });
@@ -127,16 +200,32 @@
       tablaCitas.innerHTML = '';
 
       // Recorrer las citas y agregarlas a la tabla
-      citas.forEach(function (cita) {
+      citas.forEach(function (cita, index) {
         const fila = document.createElement('tr');
         fila.innerHTML = `
           <td>${cita.nombre}</td>
           <td>${cita.email}</td>
           <td>${cita.fecha}</td>
           <td>${cita.hora}</td>
+          <td><button class="btn btn-sm btn-danger" onclick="eliminarCita(${index})">Eliminar</button></td>
         `;
         tablaCitas.appendChild(fila);
       });
+    }
+
+    // Función para eliminar una cita
+    function eliminarCita(index) {
+      // Obtener las citas del almacenamiento local
+      let citas = JSON.parse(localStorage.getItem('citas')) || [];
+
+      // Eliminar la cita del arreglo
+      citas.splice(index, 1);
+
+      // Guardar las citas actualizadas en el almacenamiento local
+      localStorage.setItem('citas', JSON.stringify(citas));
+
+      // Mostrar las citas agendadas
+      mostrarCitas();
     }
 
     // Mostrar las citas al cargar la página
