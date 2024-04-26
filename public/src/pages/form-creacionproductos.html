@@ -1,213 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agregar productos</title>
-  <!--
-  <script src="../js/carousel.js"></script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./../../../style.css">
-  <link rel="stylesheet" href="./../../../styles.scss">
-
-   <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
-
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<header>
+  <header>
+    <div class="row justify-content-end p-3">
+      <a class="col-4 col-md-2 justify-content-center align-items-center" href="/index.html">
+        <img class="img-fluid" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;">
+      </a>
+      <nav class="col-4 col-md-3 navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <button class="btn btn-lg btn-info mt-1"><a class="nav-link text-black" href="/index.html">Regresar</a></button>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <!-------------------------- Inicia Navbar ------------------------------->
-  <div class="row d-flex justify-content-end p-3">
-    <a class=" justify-content-center align-content-center col-4 col-xs-2" href="/index.html"><img class="img-fluid" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;" ></a>
-   <nav class=" col-4 justify-content-end col-xs-3 navbar navbar-expand-lg navbar-dark bg-white navbar-custom text-black mb-sm-4">
-     <nav class="container-fluid ">
-       <button class="btn btn-lg btn-info mt-1 align-items-center"><a class="nav-link text-black" href="/index.html">Regresar</a></button>
-       
-     </nav>
-   </nav>
-  </div>
-  
-
- <!--  ------------------------ Finaliza Navbar ------------------------------->
-</header>
-
-<section>
-  <div class="container my-3 m-xs-1">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-9 col-xl-8">
-        <div class="card" style="border-radius: 1rem;">
-          <div class="row align-items-center">
-            <div class="col-md-4 d-none d-md-block">
-              <img
-                      src="https://cbu01.alicdn.com/img/ibank/2020/638/006/13343600836_1203561124.jpg"
-                      alt="login form"
-                      class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; height: 450px; "
-              />
-            </div>
-            <div class="col-md-8 d-flex align-items-center">
-              <div class="card-body p-3">
-                <form id="newItemForm">
-                  <h1 class="h2 mt-0 ">Agrega productos</h1>
-                  <p class="mb-1" style="color: #45526e;">Ingresa la información para agregar un nuevo producto.</p>
-                  <div class="row">
-                    <div class="col-md-5 col-xs-12">
-                      <div class="input-group mb-1 mt-1">
-                        <label for="newItemId"></label>
-                        <span class="input-group-text ps-1" >ID producto</span>
-                        <input type="text" class="form-control pe-0" id="newItemId" placeholder="Id" required>
+  <section>
+    <div class="container my-3">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-9 col-xl-8">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-4 d-none d-md-block">
+                <img src="https://cbu01.alicdn.com/img/ibank/2020/638/006/13343600836_1203561124.jpg" alt="login form" class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; height: 450px;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-3">
+                  <form id="newItemForm">
+                    <h1 class="h2 mt-0">Agrega productos</h1>
+                    <p class="mb-1" style="color: #45526e;">Ingresa la información para agregar un nuevo producto.</p>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">ID producto</span>
+                          <input type="text" class="form-control" id="newItemId" placeholder="Id" required>
+                        </div>
+                      </div>
+                      <div class="col-md-7">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">Nombre</span>
+                          <input type="text" class="form-control" id="newItemName" placeholder="Nombre" required>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-7 col-xs-8">
-                      <div class="input-group mb-1 mt-1">
-                        <label class= "form-label" for="newItemName"></label>
-                        <span class="input-group-text" >Nombre</span>
-                        <input type="text" class="form-control" id="newItemName" placeholder="Nombre" required>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">Descripción</span>
+                          <textarea class="form-control" id="newItemDescription"></textarea>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 col-xs-8">
-                      <div class="input-group mb-1 mt-1 ps-0">
-                        <span class="input-group-text"><label class="form-label" for="newItemDescription">Descripción</label></span>
-                        <textarea type="text" class="form-control" id="newItemDescription"></textarea>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">URL</span>
+                          <input type="text" class="form-control" id="newItemImageUrl" required>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemImageUrl"></label>
-                        <span class="input-group-text" >URL</span>
-                        <input type="text" class="form-control" id="newItemImageUrl" required>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">Precio $</span>
+                          <input type="number" class="form-control" id="newItemPrice" required>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">#Piezas</span>
+                          <input type="number" class="form-control" id="newItemPieces" required>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-7 col-xs-3">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemPrice"></label>
-                        <span class="input-group-text" >Precio $</span>
-                        <input type="number" class="form-control" id="newItemPrice" required>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="input-group mb-1 mt-1">
+                          <select class="form-select" id="newItemBrand" required>
+                            <option selected disabled value="">Marca</option>
+                            <option value="Carolina Herrera">Carolina Herrera</option>
+                            <option value="Boy London">Boy London</option>
+                            <option value="Oggi">Oggi</option>
+                            <option value="Back">Back</option>
+                            <option value="Steve Madden">Steve Madden</option>
+                            <option value="Pepe Jeans">Pepe Jeans</option>
+                            <option value="Lucky Brand">Lucky Brand</option>
+                            <option value="Christian Siriano">Christian Siriano</option>
+                            <option value="Cosmopolitan">Cosmopolitan</option>
+                            <option value="Brizzant">Brizzant</option>
+                            <option value="Eno">Eno</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">Modelo</span>
+                          <input type="text" class="form-control" id="newItemModel" required>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-5 col-xs-3">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemPieces"></label>
-                        <span class="input-group-text" >#Piezas</span>
-                        <input type="number" class="form-control" id="newItemPieces" required>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="input-group mb-1 mt-1">
+                          <span class="input-group-text">SKU</span>
+                          <input type="text" class="form-control" id="newItemSKU" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="input-group mb-1 mt-1">
+                          <select class="form-select" id="newItemGender" required>
+                            <option selected disabled value="">Género</option>
+                            <option value="Unisex">Unisex</option>
+                            <option value="Woman">Dama</option>
+                            <option value="Infant">Infantil</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4 col-xs-4">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemBrand"></label>
-                        <select class="form-select" id="newItemBrand" required>
-                          <option selected disabled value="">Marca</option>
-                          <option value="Carolina Herrera">Carolina Herrera</option>
-                          <option value="Boy London">Boy London</option>
-                          <option value="Oggi">Oggi</option>
-                          <option value="Back">Back</option>
-                          <option value="Steve Madden">Steve Madden</option>
-                          <option value="Pepe Jeans">Pepe Jeans</option>
-                          <option value="Lucky Brand">Lucky Brand</option>
-                          <option value="Christian Siriano">Christian Siriano</option>
-                          <option value="Cosmopolitan">Cosmopolitan</option>
-                          <option value="Brizzant">Brizzant</option>
-                          <option value="Eno">Eno</option>
-                        </select>
+                    <div class="row">
+                      <div class="col text-center">
+                        <button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #003A5D; color: white">Agregar producto</button>
                       </div>
                     </div>
-                    <div class="col-md-8 col-xs-4">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemModel"></label>
-                        <span class="input-group-text">Modelo</span>
-                        <input type="text" class="form-control" id="newItemModel" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="input-group mb-1 mt-1">
-                        <label for="newItemSKU"></label>
-                        <span class="input-group-text">SKU</span>
-                        <input type="text" class="form-control" id="newItemSKU" required>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="input-group mb-1 mt-1">
-                        <label class="form-label" for="newItemGender"></label>
-                        <select class="form-select" id="newItemGender" required>
-                          <option selected disabled value="">Genero</option>
-                          <option value="Unisex">Unisex</option>
-                          <option value="Woman">Dama</option>
-                          <option value="Infant">Infantil</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-self-center">
-                      <button id="liveAlertBtn" type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #003A5D; color: white">Agregar producto</button>
-                    </div>
-                  </div>
-
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
+          <div id="liveAlertPlaceholder" class="mt-2"></div>
         </div>
-        <div id="liveAlertPlaceholder" class="mt-2"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- MODAL -->
+  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Datos inválidos</h1>
+          <h5 class="modal-title" id="exampleModalLabel">Datos inválidos</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <!-- Contenido del modal -->
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="closeModal">Close</button>
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="closeModal">Cerrar</button>
         </div>
       </div>
     </div>
   </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 
-<script type="module" src="../js/formProductos.js"></script>
-<!--<script type="module" src="../js/formProductos_prueba.js"></script>-->
-<script type="module" src="../js/ControlProductos.js"></script>
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/public/src/js/formProductos.js"></script>
+  <script type="module" src="/public/src/js/ControlProductos.js"></script>
 </body>
-
 </html>
