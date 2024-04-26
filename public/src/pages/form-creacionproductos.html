@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agregar productos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./../../../style.css">
+  <link rel="stylesheet" href="./../../../styles.scss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="row justify-content-end p-3">
-      <a class="col-4 col-md-2 justify-content-center align-items-center" href="/index.html">
+    <div class="row justify-content-evenly p-3">
+      <a class="col-4 col-md-2 align-items-center" href="/index.html">
         <img class="img-fluid" src="../../assets/img/Logo azul prusiano.png" alt="Logo" style="max-width: 150px;">
       </a>
       <nav class="col-4 col-md-3 navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-          <button class="btn btn-lg btn-info mt-1"><a class="nav-link text-black" href="/index.html">Regresar</a></button>
+          <button class="btn btn-lg btn-primary mt-1"><a class="nav-link" href="/index.html">Regresar</a></button>
         </div>
       </nav>
     </div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="row">
                       <div class="col text-center">
-                        <button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #003A5D; color: white">Agregar producto</button>
+                        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar producto</button>
                       </div>
                     </div>
                   </form>
@@ -159,8 +159,15 @@
       </div>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"></script>
   <script type="module" src="/public/src/js/formProductos.js"></script>
   <script type="module" src="/public/src/js/ControlProductos.js"></script>
 </body>
