@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <p class="">¡Todos los Sábados, 2x1!</p>
                 </div>
                 <div class="carousel-item active">
-                  <p class="">Realiza tu examen de la vista completamente gratis en nuestra tienda</p>
+                  <p class="">¡Realiza tu examen de la vista completamente gratis en nuestra sucursal!</p>
                 </div>
                 <div class="carousel-item">
                   <p class="">Envío gratis a todo México</p>
