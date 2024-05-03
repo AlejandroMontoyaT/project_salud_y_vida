@@ -26,8 +26,23 @@
           <h1 class="text-center mb-4">Registro</h1>
           <form id="formulario-registro" class="needs-validation" novalidate>
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre:</label>
+              <label for="nombre" class="form-label">Nombre/s:</label>
               <input type="text" class="form-control" id="nombre" required>
+              <div class="invalid-feedback">Por favor, ingresa tu nombre/s.</div>
+            </div>
+            <div class="mb-3">
+              <label for="apellidos" class="form-label">Apellidos:</label>
+              <input type="text" class="form-control" id="apellidos" required>
+              <div class="invalid-feedback">Por favor, ingresa tus apellidos.</div>
+            </div>
+            <div class="mb-3">
+              <label for="genero" class="form-label">genero:</label>
+              <select name="genero" id="genero">
+                <option value="X" selected>Selecciona una opcion</option>
+                <option value="H" >Hombre</option>
+                <option value="M">Mujer</option>
+                <option value="N">Prefiero No Decir</option>
+              </select>
               <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
             </div>
             <div class="mb-3">
