@@ -94,7 +94,7 @@ barranavegacion.innerHTML =
             <a class="nav-link" href="./src/pages/contactos.html">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/src/pages/pag-nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./src/pages/pag-nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./src/pages/form-creacionproductos.html">Agregar productos</a>
