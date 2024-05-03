@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="#"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <script type="module" src="/src/js/barraFooter.js"></script>
+  <script src="/src/js/carousel.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <div id="carrusel"></div>
+    <div id="barranavegacion"></div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center mb-4">Iniciar sesión</h1>
+          <form id="formulario-login" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="password" required>
+              <div class="invalid-feedback">Por favor, ingresa tu contraseña.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+          </form>
+          <p class="mt-3">
+            <a href="/public/src/pages/olvidelacontra.html">¿Olvidaste tu contraseña?</a>
+          </p>
+          <p>
+            ¿No tienes una cuenta? <a href="/public/src/pages/registrousuario.html">Regístrate</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="piedepagina"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Obtener referencia al formulario de login
+    const formularioLogin = document.getElementById('formulario-login');
+
+    // Manejar el envío del formulario de login
+    formularioLogin.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Validar el formulario
+      if (!formularioLogin.checkValidity()) {
+        event.stopPropagation();
+        formularioLogin.classList.add('was-validated');
+        return;
+      }
+
+      // Obtener los valores del formulario
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Obtener los usuarios registrados del almacenamiento local
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      // Buscar el usuario por email y contraseña
+      const usuario = usuarios.find(function (usuario) {
+        return usuario.email === email && usuario.password === password;
+      });
+
+      if (usuario) {
+        // Inicio de sesión exitoso
+        alert('Inicio de sesión exitoso. Serás redirigido a la página de inicio.');
+        window.location.href = '/index.html'; // Redirige a la página de inicio
+      } else {
+        // Credenciales inválidas
+        alert('Credenciales inválidas. Por favor, intenta nuevamente.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,16 +1,24 @@
+* {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  box-sizing: border-box;
+}
+body {
+  margin: 8%;
+}
+
 main{
+  margin: 10px;
   min-height: calc(100vh - (100px + 50px));
   min-height: calc(85vh);
+  
 }
 
-/* Estilos para el contenedor del carrusel */
-.carousel-container {
-  width: 100%; /* Cambiado para ocupar todo el ancho */
-  overflow: hidden;
-}
 
 /* Estilos para los elementos del carrusel */
-.carousel-item {
+#banner .carousel-item {
  
   white-space: nowrap;
   overflow: hidden;
@@ -18,12 +26,12 @@ main{
 
 
 /* Estilos para el carrusel */
-.carousel {
+#banner .carousel {
 	color: Black;
     white-space: normal;
     overflow: hidden; 
 }
-.carousel p {
+#banner .carousel p {
   display: inline-block;
   padding-left: 100%;
   animation: marquee 15s linear infinite;
@@ -31,7 +39,7 @@ main{
 /* Animación de desplazamiento del carrusel */
 @keyframes marquee {
   0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+  100% { transform: translate(-100%, 0);}
 }
 
 /* Estilos para el formulario */
@@ -48,13 +56,6 @@ main{
   height: auto; /* Altura automática para mantener la proporción */
   /*margin-top: 80px; /* Margen superior para posicionar la imagen */
   /*margin-left: 180px; /* Margen izquierdo para posicionar la imagen */
-}
-
-/* Estilos para el botón de enviar del formulario */
-#submitContact {
-  color: white; /* Color del texto */
-  border-radius: 30px; /* Borde redondeado */
-  background-color: #0f97ec; /* Color de fondo del botón */
 }
 
 /* Estilos para el  banner (barra de navegación) */
@@ -118,9 +119,14 @@ button.navbar-toggler{
   color:#1295e7;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link{
+  margin: 0;
+  text-align: center;
+}
+
 /* Estilos para el cuerpo de la página */
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   margin: 0;
   padding: 0;
   font-size: 10px; /* Tamaño de la letra en 16px */
@@ -195,9 +201,164 @@ ul {
   size: 1vw;
 }
 
-
-@media screen and (max-width:350px) {
-  /* 
-  codigo para la resposividad dependiendo del tamaño de la pantalla que elijamos via pixeles
-  */
+.contenedor {
+  position: relative;
 }
+
+.contenedor p {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-weight: bold;
+  color: #003A5D;
+}
+
+.contenedor h2 {
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  Font-weight: bold;
+  color: #003A5D;
+}
+.tab-pane p {
+  padding: 10px;
+  background-color: #07778b79;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #003A5D;
+}
+
+.nav-text {
+  color:#003A5D;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+/* build your own custom Bootstrap theme:
+   https://themestr.app
+*/
+.carouselExampleControls{
+  padding:5%;
+}
+
+@media (min-width:1050px) and (max-width:1200px) {
+  .contenedor p {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    color: #003A5D;
+  }
+  
+  .contenedor h2 {
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    Font-weight: bold;
+    color: #003A5D;
+  }
+}
+.tabs{
+  padding: 0 75px;
+}
+
+@media (min-width:900px) and (max-width:1050px) {
+  .contenedor p {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    color: #003A5D;
+  }
+  
+  .contenedor h2 {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    Font-weight: bold;
+    color: #003A5D;
+  }
+
+  .tabs{
+    padding: 0;
+  }
+}
+
+
+#formulario-li-r{
+  width: 50%;
+}
+
+
+
+@media screen and (max-width:900px) {
+
+  .contenedor {
+    position: relative;
+  }
+  .contenedor p {
+   position: relative;
+   transform: translate(0%, 0%);
+   top: 0%;
+   left: 0%;
+   background-color: #07778b79;
+   border-radius: 0 1rem;
+   padding: 5px 2rem 0;
+  }
+  .tabs{
+    padding: 0;
+  }
+  #formulario-li-r{
+    width: 100%;
+  }
+  #filtros{
+    display: none;
+  }
+  .red-social{
+  display:none;
+}
+.contenedor-head{
+  margin:0;
+  padding: 0%;
+}
+
+#popular1,#popular2{
+  width: 100%;
+}
+#items-populares, #items-populares2{
+display: grid;
+}
+
+}
+
+
+
+
+
+h1, h2 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: medium;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "GRAD" 0;
+  }
+
+h3, h4, h5 {
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: medium;
+  font-style: normal;
+  }

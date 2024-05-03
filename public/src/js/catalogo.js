@@ -1,0 +1,256 @@
+const sampleCatalog = [{
+    'id_producto':'1',
+    'nombre_producto':'OGGI 469',
+    'img':"../../../assets/img/lentes/01-Oggi.png",
+    'descripcion_p':'Rompe con lo ordinario, marca el look',
+    'precio_p': '2,000',
+    'en_stock':'5',
+    'marca':'OGGI',
+    'descuento':'0',
+    'modelo_p':'OG 469',
+    'sku':'HF525145',
+    'genero':'UNISEX'
+},
+
+    {
+        'id_producto':'2',
+        'nombre_producto':'BOY LONDON',
+        'img':"../../../assets/img/lentes/02-BoyLondon.jpeg",
+        'descripcion_p':'Diseño de marco completo ovalado que da un estilo atractivo, para que expreses tu personalidad.',
+        'precio_p': '1,050',
+        'en_stock':'5',
+        'marca':'BOY LONDON',
+        'descuento':'0',
+        'modelo_p':'BO 007',
+        'sku':'BOY-BO0',
+        'genero':'UNISEX'
+    },
+    {
+        'id_producto':'3',
+        'nombre_producto':'STEVE MADDEN',
+        'img':"../../../assets/img/lentes/03-StevenMadden.jpeg",
+        'descripcion_p':'Exprésate con lentes Steven Madden, los ojos es lo primero que se observa en una persona',
+        'precio_p': '400',
+        'en_stock':'10',
+        'marca':'STEVE MADDEN',
+        'descuento':'0',
+        'modelo_p':'Colorblends',
+        'sku':'LC1506009',
+        'genero':'U'
+    },
+    {
+        'id_producto':'4',
+        'nombre_producto': 'OG 359',
+        'img':"../../../assets/img/lentes/04-Oggi.jpeg",
+        'descripcion_p':' Lente Oftálmico Unisex',
+        'precio_p': '800',
+        'en_stock':'2',
+        'marca': 'Tous',
+        'descuento':'0',
+        'modelo_p':  'AWS42149',
+        'sku':' DTR564C44 ',
+        'genero':'M'
+    },
+    {
+        'id_producto':'5',
+        'nombre_producto':'OG 377',
+        'img':"../../../assets/img/lentes/05-Oggi.jpeg",
+        'descripcion_p':'Armazón ligero elaborado de titanio con un estilo sencillo pero vanguardista que resaltará la belleza de tus ojos.',
+        'precio_p': '400',
+        'en_stock':'3',
+        'marca':'Xicu',
+        'descuento':'0',
+        'modelo_p':'XICU C895',
+        'sku':'567423',
+        'genero':'M'
+    },
+    {
+        'id_producto':'6',
+        'nombre_producto':'OG 376',
+        'img':"../../../assets/img/lentes/06-Oggi.jpeg",
+        'descripcion_p':'Una combinación de estilo y funcionalidad',
+        'precio_p': '500',
+        'en_stock':'19',
+        'marca':'Oakley',
+        'descuento':'0',
+        'modelo_p':'3 piezas',
+        'sku':'RF624135',
+        'genero':'M'
+    },
+{
+    'id_producto':'7',
+        'nombre_producto': 'CHRISTIAN SIRIANO',
+        'img':"../../../assets/img/lentes/07-ChristianSiriano.jpeg",
+        'descripcion_p':' Lente Oftálmico para Mujer Evry CHR-TTU verde',
+        'precio_p': '999',
+        'en_stock':'4',
+        'marca': 'Evry',
+        'descuento':'0',
+        'modelo_p':  'EVR21902',
+        'sku':' PST564C44 ',
+        'genero':'M'
+},
+
+{
+    'id_producto':'8',
+    'nombre_producto':'COSMOPOLITAN',
+    'img':"../../../assets/img/lentes/08-Cosmopolitan.jpeg",
+    'descripcion_p':' Lente oftálmico para Mujer Molto COS-C910 Negro',
+    'precio_p': '999',
+    'en_stock':'3',
+    'marca':' MOLTO',
+    'descuento':'0',
+    'modelo_p':' DG-84578S',
+    'sku':' AW685C2 ',
+    'genero':'M'
+},
+{
+        "id_producto": "9",
+        "nombre_producto": "BACK",
+        "img": "../../../assets/img/lentes/09-Back.jpeg",
+        "descripcion_p": "Gafas de moda para verte joven",
+        "precio_p": "2,200",
+        "en_stock": "15",
+        "marca": "Oakley",
+        "descuento": "5",
+        "modelo_p": "Fast Jacket 2.0",
+        "sku": "OAK-FASTJACKET2.0",
+        "genero": "Hombre",
+
+},
+{
+    'id_producto':'10',
+    'nombre_producto':'PEPE JEANS ',
+    'img':"../../../assets/img/lentes/10-PepeJeans.jpeg",
+    'descripcion_p':'Protege la visión de tus pequeños exploradores con nuestros lentes oftálmicos diseñados especialmente para niños',
+    'precio_p': '1700',
+    'en_stock':'3',
+    'marca':'Xicu',
+    'descuento':'0',
+    'modelo_p':'HA10593',
+    'sku':'567423',
+    'genero':'H'
+
+},
+{
+    "id_producto": "11",
+    "nombre_producto": "LUCKY BRAND ",
+    "img": "../../../assets/img/lentes/11-LuckyBrand.jpeg",
+    "descripcion_p": "Transforma tu look en un abrir y cerrar de ojos con nuestros lentes estilo anime",
+    "precio_p": "2,200",
+    "en_stock": "15",
+    "marca": "Oakley",
+    "descuento": "5",
+    "modelo_p": "Fast Jacket 2.0",
+    "sku": "OAK-FASTJACKET2.0",
+    "genero": "Hombre",
+
+},
+{
+    "id_producto": "12",
+    "nombre_producto": "ENO ",
+    "img": "../../../assets/img/lentes/12-Eno.jpeg",
+    "descripcion_p": "Diseñadas pensando en la energía y la vitalidad de la juventud, nuestras gafas ofrecen una combinación perfecta de moda y funcionalidad.",
+    "precio_p": "2,200",
+    "en_stock": "15",
+    "marca": "Oakley",
+    "descuento": "5",
+    "modelo_p": "Fast Jacket 2.0",
+    "sku": "OAK-FASTJACKET2.0",
+    "genero": "Hombre",
+
+},
+{
+    "id_producto": "13",
+    "nombre_producto": "BRIZZANT",
+    "img": "../../../assets/img/lentes/13-Brizzant.jpeg",
+    "descripcion_p": "Desde audaces monturas hasta detalles únicos, nuestras gafas son mucho más que un accesorio, son una declaración de tu individualidad",
+    "precio_p": "2,200",
+    "en_stock": "15",
+    "marca": "Oakley",
+    "descuento": "5",
+    "modelo_p": "Fast Jacket 2.0",
+    "sku": "OAK-FASTJACKET2.0",
+    "genero": "Hombre",
+
+},
+{
+    "id_producto": "14",
+    "nombre_producto": "CAROLINA HERRERA",
+    "img": "../../../assets/img/lentes/14-CarolinaHerrera.jpeg",
+    "descripcion_p": "Descubre la elegancia atemporal con nuestras exclusivas gafas Carolina Herrera para mujer.",
+    "precio_p": "2,200",
+    "en_stock": "15",
+    "marca": "Oakley",
+    "descuento": "5",
+    "modelo_p": "Fast Jacket 2.0",
+    "sku": "OAK-FASTJACKET2.0",
+    "genero": "Hombre",
+
+},
+{
+    "id_producto": "15",
+    "nombre_producto": "BOY LONDON",
+    "img": "../../../assets/img/lentes/15-BoyLondon.jpeg",
+    "descripcion_p": "Haz realidad tus sueños de estilo anime con nuestra colección de lentes que te transportarán directamente a tu serie favorita.",
+    "precio_p": "2,200",
+    "en_stock": "15",
+    "marca": "Oakley",
+    "descuento": "5",
+    "modelo_p": "Fast Jacket 2.0",
+    "sku": "OAK-FASTJACKET2.0",
+    "genero": "Hombre",
+
+},
+{
+        'id_producto':'16',
+        'nombre_producto':'OG 333',
+        'img':"../../../assets/img/lentes/16-Oggi.jpeg",
+        'descripcion_p':'Nuestras gafas clásicas son el complemento perfecto para cualquier ocasión',
+        'precio_p': '1700',
+        'en_stock':'3',
+        'marca':'Xicu',
+        'descuento':'0',
+        'modelo_p':'HA10593',
+        'sku':'567423',
+        'genero':'H'
+
+}];
+        localStorage.setItem("items", JSON.stringify(sampleCatalog));
+
+    
+const agregarCatalogo = () => {
+    const storageItems = localStorage.getItem("items")
+    if (storageItems) {
+        const card = document.getElementById("list-items");
+        const items = JSON.parse(storageItems)
+          
+            items.forEach(item => {
+                  card.innerHTML += `<div class="col">
+                  <div class="card" style="height:350px;">
+                    <img src="${item.img}" class="card-img-top" alt="..." style="height: 125px;">
+                    <div class="card-body p-1">
+                      <h6 class="card-title text-center ">${item.nombre_producto}</h5>
+                      <p class="card-text text-wrap overflow-y-scroll m-0"  alt="${item.descripcion_p}" style="height: 95px;">${item.descripcion_p}</p>
+                      <div class="d-flex justify-content-center p-2"><h6>$${item.precio_p}</h6></div>
+                        <div class="justify-content-center">
+                            <div class="row justify-content-center align-content-center">
+                                <button class="col-6 btn btn-primary btn-sm">Comprar Ahora</button>
+                                <div class="col-4 d-flex align-content-center justify-content-center align-items-center">
+                                    <a class=" overflow-auto" href="#">+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                                    </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                 </div>
+                
+            `;
+            });
+    }
+}
+agregarCatalogo();

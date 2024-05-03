@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="#"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visítanos</title>
+    <script type="module" src="../js/barraFooter.js"></script>
+    <script src="../js/carousel.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+     <!--Enlace tipografía Roboto Serif (por Bando) (Títulos), Aleo (por Bariol Serif) (Subtítulos) y Albert Sans (Textos)-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        #map { height: 400px; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="carrusel"></div>
+        <div id="barranavegacion"></div>
+    </header>
+    <main>
+        <h1 style="text-align: center;">Nuestra Sucursal</h1>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div id="map" style="width: 80%; max-width: 600px;"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <h2>Dirección</h2>
+                <p>
+                    Texcoco: San Mateo #6574, Texcoco de Mora, Estado de México, C.P. 56170<br>
+                    Lunes a viernes: 09:00 a.m. a 8:00 p.m.<br>
+                    Sábados: 09:00 a.m. a 2:30 p.m.
+                </p>
+                <a href="./agenda-cita.html" class="btn btn-primary">Agendar Cita</a>
+            </div>
+        </div>
+    </main>
+    <div id="piedepagina"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var map = L.map('map').setView([19.5119, -98.8803], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        L.marker([19.5119, -98.8803]).addTo(map)
+            .bindPopup('Nuestra Sucursal')
+            .openPopup();
+    </script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>   
+</body>
+</html>
