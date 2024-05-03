@@ -13,21 +13,21 @@ document.addEventListener("DOMContentLoaded", function() {
         const nameParts = nameInput.value.trim().split(/\s+/);
         const validName = nameParts.every(part => /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ'-]+$/.test(part));
         if (nameParts.length < 2 || !validName) {
-            alert("Por favor ingresa un nombre válido (nombre y apellido).");
+            alert("Por favor, ingresa un nombre válido (nombre y apellido).");
             return;
         }
 
         // Validar el correo electrónico
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput.value)) {
-            alert("Por favor ingresa un correo electrónico válido.");
+            alert("Por favor, ingresa un correo electrónico válido.");
             return;
         }
 
         // Validar el teléfono
         const phonePattern = /^\d{10}$/;
         if (!phonePattern.test(phoneInput.value)) {
-            alert("Por favor ingresa un número de teléfono válido (10 dígitos numéricos).");
+            alert("Por favor, ingresa un número de teléfono válido (10 dígitos numéricos).");
             return;
         }
 
